@@ -6,7 +6,7 @@
   <meta http-equiv="x-ua-compatible" content="ie=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="{{ config('app.name') }} - {{ ucfirst(Route::current()->uri()) }}">
-  <title>{{ config('app.name') }} - {{ ucfirst(Route::current()->getName()) }}</title>
+  <title>{{ config('app.name') }}</title>
   @include('comps/home')
 </head>
 
