@@ -16,7 +16,7 @@
     <header class="bg-gray-900 text-white text-center py-20">
         <div class="container mx-auto">
             <h1 class="text-4xl font-bold mb-4">Beyond Of Seen'e Hoşgeldiniz</h1>
-            <p class="text-lg">İçeriklerin sınırsızlığını keşfedin</p>
+            <p class="text-lg">İçeriklerin sınırsızlığını keşfedina</p>
         </div>
     </header>
     <main class="container mx-auto py-8">
@@ -57,7 +57,7 @@
                   </div>
                 </div>
               </div>
-           
+
         </div>
     </main>
     @include('comps/footer')

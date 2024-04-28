@@ -1,36 +1,41 @@
-<nav class="bg-white border-gray-200">
-  <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
-    <a href="#" class="flex items-center space-x-3 rtl:space-x-reverse">
-        <img src="https://beyondofseen.com/imgs/logo.png" class="h-8" alt="Bos Logo" />
-        <span class="self-center text-2xl font-semibold whitespace-nowrap">Beyond Of Seen</span>
-    </a>
-    <button data-collapse-toggle="navbar-dropdown" type="button" class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200" aria-controls="navbar-dropdown" aria-expanded="false">
-        <span class="sr-only">Open main menu</span>
-        <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14">
-            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 1h15M1 7h15M1 13h15"/>
-        </svg>
+<nav class="flex flex-wrap items-center justify-between p-3 bg-white border-gray-200">
+  <a href="#" class="flex items-center space-x-3 rtl:space-x-reverse">
+    <img src="https://beyondofseen.com/imgs/logo.png" class="h-8" alt="Bos Logo" />
+    <span class="self-center text-2xl font-semibold whitespace-nowrap">Beyond Of Seen</span>
+  </a>
+  <div class="flex md:hidden">
+    <button id="hamburger">
+      <img class="toggle block" src="https://img.icons8.com/fluent-systems-regular/2x/menu-squared-2.png" width="40" height="40" />
+      <img class="toggle hidden" src="https://img.icons8.com/fluent-systems-regular/2x/close-window.png" width="40" height="40" />
     </button>
-    <div class="hidden w-full md:block md:w-auto" id="navbar-dropdown">
-      <ul class="flex flex-col font-medium p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 md:bg-white">
-        <li>
-          <a href="/" class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0">Ana Sayfa</a>
-        </li>
-        <li>
-          <a href="/dersler" class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0">Dersler</a>
-        </li>
-        <li>
-          <a href="#" class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0">Araçlar</a>
-        </li>
-        <li>
-          <a href="#" class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0">Oyunlar</a>
-        </li>
-        <li>
-          <a href="#" class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0">Genel Kültür</a>
-        </li>
-        <li>
-          <a href="#" class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0">Makaleler</a>
-        </li>
-      </ul>
-    </div>
+  </div>
+  <div
+          class="toggle hidden w-full md:w-auto md:flex text-center text-bold mt-4 md:mt-0 border-t-2 md:border-none  flex-col font-medium p-4 md:p-0 border border-gray-100 rounded-lg bg-gray-50 md:space-x-8 rtl:space-x-reverse md:flex-row md:border-0 md:bg-white">
+    <a href="/"
+       class="inline-block md:inline-block text-blue-900 hover:text-blue-500 px-3 py-3 border-b-2 border-blue-900 md:border-none">Ana Sayfa
+    </a>
+    <a href="/dersler"
+       class="inline-block md:inline-block text-blue-900 hover:text-blue-500 px-3 py-3 border-b-2 border-blue-900 md:border-none">Dersler
+    </a>
+    <a href="/araclar"
+       class="inline-block md:inline-block text-blue-900 hover:text-blue-500 px-3 py-3 border-b-2 border-blue-900 md:border-none">Araçlar
+    </a>
+    <a href="/oyunlar"
+       class="inline-block md:inline-block text-blue-900 hover:text-blue-500 px-3 py-3 border-b-2 border-blue-900 md:border-none">Oyunlar
+    </a>
+    <a href="/genel-kultur"
+       class="inline-block md:inline-block text-blue-900 hover:text-blue-500 px-3 py-3 border-b-2 border-blue-900 md:border-none">Genel Kültür
+    </a>
+    <a href="/makaleler"
+       class="inline-block md:inline-block text-blue-900 hover:text-blue-500 px-3 py-3 border-b-2 border-blue-900 md:border-none">Makaleler
+    </a>
   </div>
 </nav>
+<script>
+  document.getElementById("hamburger").onclick = function toggleMenu() {
+    const navToggle = document.getElementsByClassName("toggle");
+    for (let i = 0; i < navToggle.length; i++) {
+      navToggle.item(i).classList.toggle("hidden");
+    }
+  };
+</script>

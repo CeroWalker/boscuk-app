@@ -5,7 +5,7 @@
 </head>
 <body>
     @include('comps/header')
-    @include('comps.tawk')
+    @include('comps/tawk')
 <div class="container mx-auto py-6">
     <div class="flex flex-col">
         <div class="-my-2 overflow-x-auto sm:-mx-6 lg:-mx-8">
