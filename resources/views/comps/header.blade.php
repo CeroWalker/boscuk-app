@@ -10,24 +10,24 @@
     </button>
   </div>
   <div
-          class="toggle hidden w-full md:w-auto md:flex text-center text-bold mt-4 md:mt-0 border-t-2 md:border-none  flex-col font-medium p-4 md:p-0 border border-gray-100 rounded-lg bg-gray-50 md:space-x-8 rtl:space-x-reverse md:flex-row md:border-0 md:bg-white">
+          class="toggle hidden w-full md:w-auto md:flex text-center text-bold mt-4 md:mt-0 border-t-2 md:border-none  flex-col font-medium md:p-0 border border-gray-100 rounded-lg bg-gray-50 md:space-x-4 rtl:space-x-reverse md:flex-row md:border-0 md:bg-white">
     <a href="/"
-       class="inline-block md:inline-block text-blue-900 hover:text-blue-500 px-3 py-3 border-b-2 border-blue-900 md:border-none">Ana Sayfa
+       class="inline-block md:inline-block text-blue-900 hover:text-blue-500 px-1 py-3 border-b-2 border-blue-900 md:border-none">Ana Sayfa
     </a>
     <a href="/dersler"
-       class="inline-block md:inline-block text-blue-900 hover:text-blue-500 px-3 py-3 border-b-2 border-blue-900 md:border-none">Dersler
+       class="inline-block md:inline-block text-blue-900 hover:text-blue-500 px-1 py-3 border-b-2 border-blue-900 md:border-none">Dersler
     </a>
     <a href="/araclar"
-       class="inline-block md:inline-block text-blue-900 hover:text-blue-500 px-3 py-3 border-b-2 border-blue-900 md:border-none">Araçlar
+       class="inline-block md:inline-block text-blue-900 hover:text-blue-500 px-1 py-3 border-b-2 border-blue-900 md:border-none">Araçlar
     </a>
     <a href="/oyunlar"
-       class="inline-block md:inline-block text-blue-900 hover:text-blue-500 px-3 py-3 border-b-2 border-blue-900 md:border-none">Oyunlar
+       class="inline-block md:inline-block text-blue-900 hover:text-blue-500 px-1 py-3 border-b-2 border-blue-900 md:border-none">Oyunlar
     </a>
     <a href="/genel-kultur"
-       class="inline-block md:inline-block text-blue-900 hover:text-blue-500 px-3 py-3 border-b-2 border-blue-900 md:border-none">Genel Kültür
+       class="inline-block md:inline-block text-blue-900 hover:text-blue-500 px-1 py-3 border-b-2 border-blue-900 md:border-none">Genel Kültür
     </a>
     <a href="/makaleler"
-       class="inline-block md:inline-block text-blue-900 hover:text-blue-500 px-3 py-3 border-b-2 border-blue-900 md:border-none">Makaleler
+       class="inline-block md:inline-block text-blue-900 hover:text-blue-500 px-1 py-3 border-b-2 border-blue-900 md:border-none">Makaleler
     </a>
   </div>
 </nav>
