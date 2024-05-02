@@ -10,7 +10,7 @@
         <p class="text-lg">Sitemizde bulunan oyunlara bu sayfadan ulaşabilirsiniz</p>
     </div>
 </header>
-<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 p-10 md:px-20">
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 p-10 md:px-20 md:mt-10">
 
     <div class="bg-white rounded-xl shadow-md overflow-hidden">
         <div class="relative">
