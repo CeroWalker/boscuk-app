@@ -3,6 +3,12 @@
     @include("comps/requirement")
 </head>
 @include("comps/header")
+<header class="bg-gray-900 text-white text-center py-20">
+    <div class="container mx-auto">
+        <h1 class="text-4xl font-bold mb-4">Beyond Of Seen Makaleler</h1>
+        <p class="text-lg">Sitemizde bulunan makalelere bu sayfadan ulaşabilirsiniz</p>
+    </div>
+</header>
 <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 p-10 md:px-20">
     <div class="bg-white rounded-xl shadow-md overflow-hidden">
         <div class="relative">
