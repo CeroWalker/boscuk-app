@@ -7,7 +7,7 @@
 
     <div class="bg-white rounded-xl shadow-md overflow-hidden">
         <div class="relative">
-            <img class="w-full h-auto object-cover" src="/images/znake.png">
+            <img class="w-full h-auto object-cover" src="https://beyondofseen.com/images/znake.png">
         </div>
         <div class="p-4">
             <div class="text-lg font-medium text-gray-800 mb-2">Znake (Snake)</div>
@@ -18,7 +18,7 @@
 
     <div class="bg-white rounded-xl shadow-md overflow-hidden">
         <div class="relative">
-            <img class="w-full h-auto object-cover" src="/images/tetris.png">
+            <img class="w-full h-auto object-cover" src="https://beyondofseen.com/images/tetris.png">
         </div>
         <div class="p-4">
             <div class="text-lg font-medium text-gray-800 mb-2">Tetris</div>
@@ -29,7 +29,7 @@
 
     <div class="bg-white rounded-xl shadow-md overflow-hidden">
         <div class="relative">
-            <img class="w-full h-auto object-cover" src="/images/coming.png">
+            <img class="w-full h-auto object-cover" src="https://beyondofseen.com/images/coming.png">
         </div>
         <div class="p-4">
             <div class="text-lg font-medium text-gray-800 mb-2">Çok Yakında</div>
@@ -39,18 +39,7 @@
 
     <div class="bg-white rounded-xl shadow-md overflow-hidden">
         <div class="relative">
-            <img class="w-full h-auto object-cover" src="/images/coming.png">
-        </div>
-        <div class="p-4">
-            <div class="text-lg font-medium text-gray-800 mb-2">Çok Yakında</div>
-            <p class="text-gray-500 text-sm">Çok Yakında...</p>
-        </div>
-    </div>
-
-
-    <div class="bg-white rounded-xl shadow-md overflow-hidden">
-        <div class="relative">
-            <img class="w-full h-auto object-cover" src="/images/coming.png">
+            <img class="w-full h-auto object-cover" src="https://beyondofseen.com/images/coming.png">
         </div>
         <div class="p-4">
             <div class="text-lg font-medium text-gray-800 mb-2">Çok Yakında</div>
@@ -61,7 +50,18 @@
 
     <div class="bg-white rounded-xl shadow-md overflow-hidden">
         <div class="relative">
-            <img class="w-full h-auto object-cover" src="{{asset('/images/coming.png')}}">
+            <img class="w-full h-auto object-cover" src="https://beyondofseen.com/images/coming.png">
+        </div>
+        <div class="p-4">
+            <div class="text-lg font-medium text-gray-800 mb-2">Çok Yakında</div>
+            <p class="text-gray-500 text-sm">Çok Yakında...</p>
+        </div>
+    </div>
+
+
+    <div class="bg-white rounded-xl shadow-md overflow-hidden">
+        <div class="relative">
+            <img class="w-full h-auto object-cover" src="{{asset('https://beyondofseen.com/images/coming.png')}}">
         </div>
         <div class="p-4">
             <div class="text-lg font-medium text-gray-800 mb-2">Çok Yakında</div>

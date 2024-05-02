@@ -6,7 +6,7 @@
 <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 p-10 md:px-20">
     <div class="bg-white rounded-xl shadow-md overflow-hidden">
         <div class="relative">
-            <img class="w-full h-auto object-cover" src="/images/pdfconvert.png">
+            <img class="w-full h-auto object-cover" src="https://beyondofseen.com/images/pdfconvert.png">
         </div>
         <div class="p-4">
             <div class="text-lg font-medium text-gray-800 mb-2">PDF Dönüştürme Aracı</div>
@@ -17,7 +17,7 @@
 
     <div class="bg-white rounded-xl shadow-md overflow-hidden">
         <div class="relative">
-            <img class="w-full h-auto object-cover" src="/images/pngtotext.png">
+            <img class="w-full h-auto object-cover" src="https://beyondofseen.com/images/pngtotext.png">
         </div>
         <div class="p-4">
             <div class="text-lg font-medium text-gray-800 mb-2">Resimden Yazıya DÖnüştürme Aracı</div>
@@ -28,7 +28,7 @@
 
     <div class="bg-white rounded-xl shadow-md overflow-hidden">
         <div class="relative">
-            <img class="w-full h-auto object-cover" src="/images/tts.png">
+            <img class="w-full h-auto object-cover" src="https://beyondofseen.com/images/tts.png">
         </div>
         <div class="p-4">
             <div class="text-lg font-medium text-gray-800 mb-2">TTS Aracımız</div>
@@ -38,7 +38,7 @@
 
     <div class="bg-white rounded-xl shadow-md overflow-hidden">
         <div class="relative">
-            <img class="w-full h-auto object-cover" src="/images/coming.png">
+            <img class="w-full h-auto object-cover" src="https://beyondofseen.com/images/coming.png">
         </div>
         <div class="p-4">
             <div class="text-lg font-medium text-gray-800 mb-2">Çok Yakında</div>
@@ -49,7 +49,7 @@
 
     <div class="bg-white rounded-xl shadow-md overflow-hidden">
         <div class="relative">
-            <img class="w-full h-auto object-cover" src="/images/coming.png">
+            <img class="w-full h-auto object-cover" src="https://beyondofseen.com/images/coming.png">
         </div>
         <div class="p-4">
             <div class="text-lg font-medium text-gray-800 mb-2">Çok Yakında</div>
@@ -60,7 +60,7 @@
 
     <div class="bg-white rounded-xl shadow-md overflow-hidden">
         <div class="relative">
-            <img class="w-full h-auto object-cover" src="{{asset('/images/coming.png')}}">
+            <img class="w-full h-auto object-cover" src="{{asset('https://beyondofseen.com/images/coming.png')}}">
         </div>
         <div class="p-4">
             <div class="text-lg font-medium text-gray-800 mb-2">Çok Yakında</div>

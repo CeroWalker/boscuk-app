@@ -23,7 +23,7 @@
             <div class="max-w-md mx-auto bg-zinc-900 rounded-xl shadow-md overflow-hidden md:max-w-2xl">
                 <div class="relative">
                   <div class="md:shrink-0">
-                    <img class="w-full" src="https://beyondofseen.com/imgs/derz.png" alt="Dersler fotoğraf">
+                    <img class="w-full" src="https://beyondofseen.com/images/derz.png" alt="Dersler fotoğraf">
                   </div>
                   <div class="p-8">
                     <div class="uppercase tracking-wide text-sm text-cyan-300 font-semibold">Beyond Of Seen</div>
@@ -35,7 +35,7 @@
             <div class="max-w-md mx-auto bg-zinc-900 rounded-xl shadow-md overflow-hidden md:max-w-2xl">
                 <div class="relative">
                   <div class="md:shrink-0">
-                    <img class="w-full" src="https://beyondofseen.com/imgs/tools.png" alt="">
+                    <img class="w-full" src="https://beyondofseen.com/images/tools.png" alt="">
                   </div>
                   <div class="p-8">
                     <div class="uppercase tracking-wide text-sm text-cyan-300 font-semibold">Beyond Of Seen</div>
@@ -47,7 +47,7 @@
              <div class="max-w-md mx-auto bg-zinc-900 rounded-xl shadow-md overflow-hidden md:max-w-2xl">
                 <div class="relative">
                   <div class="md:shrink-0">
-                    <img class="w-full" src="https://beyondofseen.com/imgs/gamez.png" alt="">
+                    <img class="w-full" src="https://beyondofseen.com/images/gamez.png" alt="">
                   </div>
                   <div class="p-8">
                     <div class="uppercase tracking-wide text-sm text-cyan-300 font-semibold">Beyond Of Seen</div>
@@ -63,7 +63,7 @@
             <div class="max-w-md mx-auto bg-zinc-900 rounded-xl shadow-md overflow-hidden md:max-w-2xl">
                 <div class="relative">
                   <div class="md:shrink-0">
-                    <img class="w-full" src="https://beyondofseen.com/imgs/derz.png" alt="Dersler fotoğraf">
+                    <img class="w-full" src="https://beyondofseen.com/images/derz.png" alt="Dersler fotoğraf">
                   </div>
                   <div class="p-8">
                     <div class="uppercase tracking-wide text-sm text-cyan-300 font-semibold">Beyond Of Seen</div>
@@ -75,7 +75,7 @@
             <div class="max-w-md mx-auto bg-zinc-900 rounded-xl shadow-md overflow-hidden md:max-w-2xl">
                 <div class="relative">
                   <div class="md:shrink-0">
-                    <img class="w-full" src="https://beyondofseen.com/imgs/tools.png" alt="">
+                    <img class="w-full" src="https://beyondofseen.com/images/tools.png" alt="">
                   </div>
                   <div class="p-8">
                     <div class="uppercase tracking-wide text-sm text-cyan-300 font-semibold">Beyond Of Seen</div>
@@ -87,7 +87,7 @@
              <div class="max-w-md mx-auto bg-zinc-900 rounded-xl shadow-md overflow-hidden md:max-w-2xl">
                 <div class="relative">
                   <div class="md:shrink-0">
-                    <img class="w-full" src="https://beyondofseen.com/imgs/gamez.png" alt="">
+                    <img class="w-full" src="https://beyondofseen.com/images/gamez.png" alt="">
                   </div>
                   <div class="p-8">
                     <div class="uppercase tracking-wide text-sm text-cyan-300 font-semibold">Beyond Of Seen</div>
