@@ -14,10 +14,12 @@ return new class extends Migration
         Schema::create('lessons', function (Blueprint $table) {
             $table->id();
             $table->string('title');
+            $table->string('slug');
             $table->integer('category_id');
-            $table->string('content')->nullable();
+            $table->text('content')->nullable();
             $table->string('content_audio')->nullable();
-            $table->json('attachments')->nullable();
+            $table->string('text_file')->nullable();
+            $table->string('audio_file')->nullable();
             $table->integer('order')->nullable()->unique();
             $table->timestamps();
         });

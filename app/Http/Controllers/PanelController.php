@@ -3,16 +3,15 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Models\Lessons;
-use App\Models\LessonCategory;
-class LessonsController extends Controller
+
+class ToolsController extends Controller
 {
     /**
      * Display a listing of the resource.
      */
     public function index()
     {
-        return view("lessons");
+        return view('panel');
     }
 
     /**
@@ -20,7 +19,7 @@ class LessonsController extends Controller
      */
     public function create()
     {
-        // return dd(Lessons::all());
+        //
     }
 
     /**
@@ -34,10 +33,9 @@ class LessonsController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(string $slug)
+    public function show(string $id)
     {
-        $data['lesson'] = Lessons::query()->select('*')->where('slug', '=',$slug)->firstOrFail();
-        return view('lesson',$data);
+        //
     }
 
     /**

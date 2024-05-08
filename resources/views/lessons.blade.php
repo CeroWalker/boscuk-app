@@ -1,4 +1,5 @@
-<html lang="tr">
+<!DOCTYPE html>
+<html lang="en">
 <head>
     @include('comps/requirement')
 </head>
