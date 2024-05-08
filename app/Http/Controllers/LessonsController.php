@@ -34,9 +34,9 @@ class LessonsController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(string $slug)
+    public function show(string $title_id)
     {
-        $data['lesson'] = Lessons::query()->select('*')->where('slug', '=',$slug)->firstOrFail();
+        $data['lesson'] = Lessons::query()->select('*')->where('title_id', '=',$title_id)->firstOrFail();
         return view('lesson',$data);
     }
 

@@ -14,8 +14,8 @@ return new class extends Migration
         Schema::create('lessons', function (Blueprint $table) {
             $table->id();
             $table->string('title');
-            $table->string('slug');
-            $table->integer('category_id');
+            $table->string('title_id');
+            $table->integer('lesson_id');
             $table->text('content')->nullable();
             $table->string('content_audio')->nullable();
             $table->string('text_file')->nullable();

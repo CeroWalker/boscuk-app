@@ -21,15 +21,15 @@
             <source src="{{$lesson->content_audio}}" type="audio/mpeg">
         </audio>
         <div class="grid grid-cols-1">
-            <p class="text-l w-1/2 text-center mx-auto">{!! nl2br(e($lesson->content)) !!}</p>
+            <p class="text-l w-1/2 text-center mx-auto">{!! nl2br($lesson->content) !!}</p>
         </div>
 
         <div class="mt-1">
             <p>Pdf Dosyasını indirmek için <a href="{{$lesson->text_file}}" class="btn btn-primary">Tıkla</a></p>
             <p>Pdf Dosyasını indirmek için <a href="{{$lesson->audio_file}}" class="btn btn-primary">Tıkla</a></p>
         </div>
-            
-        
+
+
 
     </div>
 
