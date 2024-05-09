@@ -32,6 +32,7 @@ class UserResource extends Resource
                     ->schema([  // Define fields within the section
                         TextInput::make('name')->required(),
                         TextInput::make('email')->required()->email(),
+                        TextInput::make('password')->required()->password(),
                     ]),
             ]);
     }
