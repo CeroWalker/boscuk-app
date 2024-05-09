@@ -5,14 +5,14 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\Lessons;
 use App\Models\LessonCategory;
-class LessonsController extends Controller
+class LessonController extends Controller
 {
     /**
      * Display a listing of the resource.
      */
     public function index()
     {
-        return view("lessons");
+        return redirect('dersler');
     }
 
     /**
@@ -34,9 +34,10 @@ class LessonsController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(string $slug)
+    public function show(string $title_id)
     {
-        //
+        $data['lesson'] = Lessons::query()->select('*')->where('title_id', '=',$title_id)->firstOrFail();
+        return view('lesson',$data);
     }
 
     /**

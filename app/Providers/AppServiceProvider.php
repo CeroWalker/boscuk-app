@@ -5,6 +5,7 @@ namespace App\Providers;
 use Illuminate\Support\Facades\URL;
 use Illuminate\Support\ServiceProvider;
 use App\Models\Lesson;
+use App\Models\User;
 
 class AppServiceProvider extends ServiceProvider
 {
@@ -22,6 +23,6 @@ class AppServiceProvider extends ServiceProvider
     public function boot(): void
     {
         Lesson::unguard();
-        URL::forceScheme('https');
+        User::unguard();
     }
 }

@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\LessonsController;
+use App\Http\Controllers\LessonController;
 use  App\Http\Controllers\ToolsController;
 use  App\Http\Controllers\GamesController;
 use  App\Http\Controllers\CultureController;
@@ -17,6 +18,7 @@ Route::get('/test', function () {
 });
 
 Route::resource('/dersler', LessonsController::class);
+Route::resource('/ders', LessonController::class);
 Route::resource("/araclar", ToolsController::class);
 Route::resource("/oyunlar", GamesController::class);
 Route::resource("/genel-kultur", CultureController::class);
