@@ -2,9 +2,9 @@
 
 namespace App\Filament\Resources;
 
-use App\Filament\Resources\LessonResource\Pages;
-use App\Filament\Resources\LessonResource\RelationManagers;
-use App\Models\Lesson;
+use App\Filament\Resources\CultureResource\Pages;
+use App\Filament\Resources\CultureResource\RelationManagers;
+use App\Models\Culture;
 use Faker\Provider\Text;
 use Filament\Actions\DeleteAction;
 use Filament\Forms;
@@ -22,35 +22,26 @@ use Filament\Forms\Components\Select;
 use Filament\Forms\Set;
 use Illuminate\Support\Str;
 
-class LessonResource extends Resource
+class CultureResource extends Resource
 {
-    protected static ?string $model = Lesson::class;
+    protected static ?string $model = Culture::class;
 
-    protected static ?string $navigationIcon = 'heroicon-o-book-open';
+    protected static ?string $navigationIcon = 'heroicon-o-rectangle-stack';
+    protected static ?string $navigationLabel = 'General Culture';
+    protected static ?string $label = 'General Culture';
 
     public static function form(Form $form): Form
     {
         return $form
             ->schema([
                 Section::make()
-                    ->schema([  // Define fields within the section
+                    ->schema([
                         TextInput::make('title')->required()
                             ->live(onBlur: true)
                             ->afterStateUpdated(fn (Set $set, ?string $state) => $set('title_id', Str::slug($state))),
                         TextInput::make('title_id')
-                            ->prefix('https://beyondofseen.com/ders/'),
-                        Select::make('lesson_id')
-                            ->options([
-                                '9' => '9.Sınıf',
-                                '10' => '10.Sınıf',
-                                '11' => '11.Sınıf',
-                                '12' => '12.Sınıf',
-                                'ekpss' => 'Kpss/Ekpss',
-                            ]),
+                            ->prefix('https://beyondofseen.com/kultur/'),
                         RichEditor::make('content')->required(),
-                        TextInput::make('content_audio'),
-                        TextInput::make('text_file'),
-                        TextInput::make('audio_file'),
                     ]),
 
             ]);
@@ -62,7 +53,6 @@ class LessonResource extends Resource
             ->columns([
                 TextColumn::make('title'),
                 TextColumn::make('title_id'),
-                TextColumn::make('lesson_id'),
             ])
             ->filters([
                 //
@@ -88,9 +78,9 @@ class LessonResource extends Resource
     public static function getPages(): array
     {
         return [
-            'index' => Pages\ListLessons::route('/'),
-            'create' => Pages\CreateLesson::route('/create'),
-            'edit' => Pages\EditLesson::route('/{record}/edit'),
+            'index' => Pages\ListCultures::route('/'),
+            'create' => Pages\CreateCulture::route('/create'),
+            'edit' => Pages\EditCulture::route('/{record}/edit'),
         ];
     }
 }

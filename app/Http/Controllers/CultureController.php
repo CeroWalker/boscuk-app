@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Lessons;
 use Illuminate\Http\Request;
 
 class CultureController extends Controller
@@ -11,7 +12,7 @@ class CultureController extends Controller
      */
     public function index()
     {
-        return view('culture');
+        return redirect('genel-kultur');
     }
 
     /**
@@ -19,7 +20,7 @@ class CultureController extends Controller
      */
     public function create()
     {
-        //
+        // return dd(Lessons::all());
     }
 
     /**
@@ -33,9 +34,10 @@ class CultureController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(string $id)
+    public function show(string $title_id)
     {
-        //
+        $data['cultures'] = Lessons::query()->select('*')->where('title_id', '=', $title_id)->firstOrFail();
+        return view('cultures', $data);
     }
 
     /**
@@ -62,3 +64,4 @@ class CultureController extends Controller
         //
     }
 }
+

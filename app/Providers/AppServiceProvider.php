@@ -6,6 +6,7 @@ use Illuminate\Support\Facades\URL;
 use Illuminate\Support\ServiceProvider;
 use App\Models\Lesson;
 use App\Models\User;
+use App\Filament\Resources\CultureResource;
 
 class AppServiceProvider extends ServiceProvider
 {

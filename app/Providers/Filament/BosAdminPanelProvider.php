@@ -17,6 +17,8 @@ use Illuminate\Routing\Middleware\SubstituteBindings;
 use Illuminate\Session\Middleware\AuthenticateSession;
 use Illuminate\Session\Middleware\StartSession;
 use Illuminate\View\Middleware\ShareErrorsFromSession;
+use Filament\Pages\Auth\Login;
+use Filament\Pages\Auth\Register;
 
 class BosAdminPanelProvider extends PanelProvider
 {
@@ -26,7 +28,7 @@ class BosAdminPanelProvider extends PanelProvider
             ->default()
             ->id('bos-admin')
             ->path('bos-admin')
-            ->login()
+            ->login(Login::class)
             ->colors([
                 'primary' => Color::Amber,
             ])

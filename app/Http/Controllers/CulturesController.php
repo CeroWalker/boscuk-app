@@ -3,15 +3,16 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\Culture;
 
-class PanelController extends Controller
+class CulturesController extends Controller
 {
     /**
      * Display a listing of the resource.
      */
     public function index()
     {
-        return view('panel');
+        return view('culture');
     }
 
     /**
@@ -33,7 +34,7 @@ class PanelController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(string $id)
+    public function show(string $title_id)
     {
         //
     }
