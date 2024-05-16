@@ -6,7 +6,7 @@
     <meta name="description" content="{{ config('app.name') }} - {{ $lesson->title }}">
     <title>{{ config('app.name') }} - {{ $lesson->title }}</title>
     <link rel="icon" href="https://drive.usercontent.google.com/download?id=17HlpXUMzsR23-x0BjLMDLIEDfyEH8n7A&export=download&authuser=0" type="image/png">
-    <link rel="stylesheet" href="http://localhost:8000/css/style.css">
+    <link rel="stylesheet" href="https://beyondofseen.com/css/style.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@100;200;300;400;500;600;700&family=Marcellus&family=Overpass:wght@200;300;400;600;700&display=swap" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.css" rel="stylesheet" />
