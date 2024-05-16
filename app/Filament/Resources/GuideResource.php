@@ -2,9 +2,9 @@
 
 namespace App\Filament\Resources;
 
-use App\Filament\Resources\CultureResource\Pages;
-use App\Filament\Resources\CultureResource\RelationManagers;
-use App\Models\Culture;
+use App\Filament\Resources\GuideResource\Pages;
+use App\Filament\Resources\GuideResource\RelationManagers;
+use App\Models\Guide;
 use Faker\Provider\Text;
 use Filament\Actions\DeleteAction;
 use Filament\Forms;
@@ -23,13 +23,11 @@ use Filament\Forms\Components\Select;
 use Filament\Forms\Set;
 use Illuminate\Support\Str;
 
-class CultureResource extends Resource
+class GuideResource extends Resource
 {
-    protected static ?string $model = Culture::class;
+    protected static ?string $model = Guide::class;
 
     protected static ?string $navigationIcon = 'heroicon-o-rectangle-stack';
-    protected static ?string $navigationLabel = 'General Culture';
-    protected static ?string $label = 'General Culture';
 
     public static function form(Form $form): Form
     {
@@ -41,12 +39,12 @@ class CultureResource extends Resource
                             ->live(onBlur: true)
                             ->afterStateUpdated(fn (Set $set, ?string $state) => $set('title_id', Str::slug($state))),
                         TextInput::make('title_id')
-                            ->prefix('https://beyondofseen.com/kultur/'),
+                            ->prefix('https://beyondofseen.com/rehber/'),
                         RichEditor::make('content')
                             ->fileAttachmentsDisk('s3')
-                                ->fileAttachmentsDirectory('images')
-                                ->columnSpan(2)
-                                ->required(),
+                            ->fileAttachmentsDirectory('images')
+                            ->columnSpan(2)
+                            ->required(),
                     ]),
 
             ]);
@@ -57,7 +55,10 @@ class CultureResource extends Resource
         return $table
             ->columns([
                 TextColumn::make('title'),
-                TextColumn::make('title_id'),
+                TextColumn::make('title_id')->label('Link'),
+                TextColumn::make( 'created_at')->label('Created At'),
+                TextColumn::make( 'updated_at')->label('Edited At'),
+
             ])
             ->filters([
                 //
@@ -83,9 +84,9 @@ class CultureResource extends Resource
     public static function getPages(): array
     {
         return [
-            'index' => Pages\ListCultures::route('/'),
-            'create' => Pages\CreateCulture::route('/create'),
-            'edit' => Pages\EditCulture::route('/{record}/edit'),
+            'index' => Pages\ListGuides::route('/'),
+            'create' => Pages\CreateGuide::route('/create'),
+            'edit' => Pages\EditGuide::route('/{record}/edit'),
         ];
     }
 }

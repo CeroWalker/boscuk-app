@@ -26,8 +26,8 @@
     <a href="/genel-kultur"
        class="inline-block md:inline-block text-blue-900 hover:text-blue-500 px-1 py-3 border-b-2 border-blue-900 md:border-none">Genel Kültür
     </a>
-    <a href="/makaleler"
-       class="inline-block md:inline-block text-blue-900 hover:text-blue-500 px-1 py-3 border-b-2 border-blue-900 md:border-none">Makaleler
+    <a href="/rehberler"
+       class="inline-block md:inline-block text-blue-900 hover:text-blue-500 px-1 py-3 border-b-2 border-blue-900 md:border-none">Rehberler
     </a>
   </div>
 </nav>

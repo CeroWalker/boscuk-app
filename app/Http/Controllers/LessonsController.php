@@ -12,7 +12,9 @@ class LessonsController extends Controller
      */
     public function index()
     {
-        return view("lessons");
+        $lessons = Lessons::all();
+
+        return view('lessons', compact('lessons'));
     }
 
     /**
@@ -34,9 +36,11 @@ class LessonsController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(string $slug)
+    public function show(string $lesson_id)
     {
-        //
+        $data['lessons'] = Lessons::query()->where('lesson_id', $lesson_id)->get()->firstOrFail();
+        return view('lessons', $data);
+
     }
 
     /**

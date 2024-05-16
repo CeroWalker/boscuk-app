@@ -2,17 +2,17 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Guide;
 use Illuminate\Http\Request;
-use App\Models\Lessons;
-use App\Models\LessonCategory;
-class LessonController extends Controller
+
+class GuideController extends Controller
 {
     /**
      * Display a listing of the resource.
      */
     public function index()
     {
-        return redirect('dersler');
+        return redirect('rehberler');
     }
 
     /**
@@ -20,7 +20,7 @@ class LessonController extends Controller
      */
     public function create()
     {
-        // return dd(Lessons::all());
+        //
     }
 
     /**
@@ -36,8 +36,8 @@ class LessonController extends Controller
      */
     public function show(string $title_id)
     {
-        $data['lesson'] = Lessons::query()->select('*')->where('title_id', '=',$title_id)->firstOrFail();
-        return view('getlesson', $data);
+        $data['guide'] = Guide::query()->select('*')->where('title_id', '=',$title_id)->firstOrFail();
+        return view('getguide',$data);
     }
 
     /**

@@ -47,7 +47,11 @@ class LessonResource extends Resource
                                 '12' => '12.Sınıf',
                                 'ekpss' => 'Kpss/Ekpss',
                             ]),
-                        RichEditor::make('content')->required(),
+                        RichEditor::make('content')
+                            ->fileAttachmentsDisk('s3')
+                            ->fileAttachmentsDirectory('images')
+                            ->columnSpan(2)
+                            ->required(),
                         TextInput::make('content_audio'),
                         TextInput::make('text_file'),
                         TextInput::make('audio_file'),

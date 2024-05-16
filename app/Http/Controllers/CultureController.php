@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Culture;
 use App\Models\Lessons;
 use Illuminate\Http\Request;
 
@@ -36,8 +37,8 @@ class CultureController extends Controller
      */
     public function show(string $title_id)
     {
-        $data['cultures'] = Lessons::query()->select('*')->where('title_id', '=', $title_id)->firstOrFail();
-        return view('lesson', $data);
+        $data['culture'] = Culture::query()->select('*')->where('title_id', '=', $title_id)->firstOrFail();
+        return view('getculture', $data);
     }
 
     /**

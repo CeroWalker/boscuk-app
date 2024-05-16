@@ -2,6 +2,7 @@
 
 namespace App\Providers;
 
+use App\Models\Guide;
 use Illuminate\Support\Facades\URL;
 use Illuminate\Support\ServiceProvider;
 use App\Models\Lesson;
@@ -23,6 +24,7 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot(): void
     {
+        Guide::unguard();
         Lesson::unguard();
         User::unguard();
     }
