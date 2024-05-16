@@ -4,13 +4,21 @@
 Beyond Of Seen
 </h1>
 
-## About Repo
+## Hakkında
+Beyond of Seen, [site hakkında kısa bir açıklama yazın].
 
-This repo contains files from [Beyond Of Seen](https://beyondofseen.com/)
+## Kullanılan Teknolojiler:
+<ul>
+    <a href="https://laravel.com"><li>Laravel</li></a>
+    <a href="https://filamentphp.com"><li>FilamentPhp</li></a>
+    <a href="https://tailwindcss.com"><li>Tailwind</li></a>
+</ul>
 
+Katkıda Bulunma
+Beyond of Seen'e katkıda bulunmak isterseniz [Discord](https://discord.gg/9BpnWM7qWF) sunucumuza gelebilirsiniz.
 
-## Our Sponsor
+## Teşekkürler
+[Sergin Özer](https://www.instagram.com/serginozer/)
+Beyond of Seen'e katkıda bulunan herkese teşekkür ederiz!
 
- [Sergin Özer](https://www.instagram.com/serginozer/).
-
-## Made with [Laravel](https://laravel.com) and ❤️
+Made with [Laravel](https://laravel.com) and ❤️
