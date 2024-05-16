@@ -1,17 +1,14 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://beyondofseen.com/images/logo.png" width="400"></a></p>
+<a href="https://beyondofseen.com" target="_blank"><img align='center' src="https://beyondofseen.com/images/logo.png" width="400"></a>
 
-<p align="center">
-Beyond Of Seen
-</p>
 
 ## Hakkında
-Beyond of Seen, [site hakkında kısa bir açıklama yazın].
+[Beyond of Seen](https://beyondofseen.com/), içerisinde Dersler,Araçlar,Genel Kültür ve daha birçok içerik ve bilgi bulunduran bir site. Hemen göz atın ve içeriklerin sınırsızlığını keşfedin!
 
 ## Kullanılan Teknolojiler:
 <ul>
-    <a href="https://laravel.com"><li>Laravel</li></a>
-    <a href="https://filamentphp.com"><li>FilamentPhp</li></a>
-    <a href="https://tailwindcss.com"><li>Tailwind</li></a>
+    <li>[Laravel](https://laravel.com)</li>
+    <li>[FilamentPhp](https://filamentphp.com)</li>
+    <li>[Tailwind](https://tailwindcss.com)</li>
 </ul>
 
 Katkıda Bulunma
