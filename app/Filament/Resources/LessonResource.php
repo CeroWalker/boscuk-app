@@ -39,7 +39,7 @@ class LessonResource extends Resource
                             ->afterStateUpdated(fn (Set $set, ?string $state) => $set('title_id', Str::slug($state))),
                         TextInput::make('title_id')
                             ->prefix('https://beyondofseen.com/ders/'),
-                        Select::make('lesson_id')
+                        Select::make('lesson_id')->required()
                             ->options([
                                 '9' => '9.Sınıf',
                                 '10' => '10.Sınıf',
