@@ -1,4 +1,4 @@
-<a href="https://beyondofseen.com" target="_blank"><img align='center' src="https://beyondofseen.com/images/logo.png" width="400"></a>
+<p align="center"><a href="https://beyondofseen.com" target="_blank"><img src="https://beyondofseen.com/images/logo.png" width="400"></a></p>
 
 
 ## Hakkında
