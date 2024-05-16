@@ -23,6 +23,7 @@
 
 <body>
 @include("comps/header")
+@include("comps/tawk")
 
 <div class="bg-gray-900 text-white text-center py-20 mx-auto w-auto">
     <h1 class="text-4xl font-bold mb-4">{{ $guide->title }}</h1>

@@ -37,7 +37,7 @@
                     <tr>
                         <td class="px-6 py-4 whitespace-nowrap">
                             <div class="text-sm text-gray-900">
-                                <a href="http://localhost:8000/ders/{{ $lesson->title_id }}">{{ $lesson->title }}</a>
+                                <a class="text-xl" href="http://localhost:8000/ders/{{ $lesson->title_id }}">{{ $lesson->title }}</a>
                             </div>
                         </td>
                     </tr>
@@ -56,7 +56,7 @@
                     <tr>
                         <td class="px-6 py-4 whitespace-nowrap">
                             <div class="text-sm text-gray-900">
-                                <a href="http://localhost:8000/ders/{{ $lesson->title_id }}">{{ $lesson->title }}</a>
+                                <a class="text-xl" href="http://localhost:8000/ders/{{ $lesson->title_id }}">{{ $lesson->title }}</a>
                             </div>
                         </td>
                     </tr>
@@ -74,7 +74,7 @@
                     <tr>
                         <td class="px-6 py-4 whitespace-nowrap">
                             <div class="text-sm text-gray-900">
-                                <a href="http://localhost:8000/ders/{{ $lesson->title_id }}">{{ $lesson->title }}</a>
+                                <a class="text-xl" href="http://localhost:8000/ders/{{ $lesson->title_id }}">{{ $lesson->title }}</a>
                             </div>
                         </td>
                     </tr>
@@ -92,7 +92,7 @@
                     <tr>
                         <td class="px-6 py-4 whitespace-nowrap">
                             <div class="text-sm text-gray-900">
-                                <a href="http://localhost:8000/ders/{{ $lesson->title_id }}">{{ $lesson->title }}</a>
+                                <a class="text-xl" href="http://localhost:8000/ders/{{ $lesson->title_id }}">{{ $lesson->title }}</a>
                             </div>
                         </td>
                     </tr>
