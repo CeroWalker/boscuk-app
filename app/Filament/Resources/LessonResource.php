@@ -21,6 +21,7 @@ use Filament\Forms\Components\Section;
 use Filament\Forms\Components\Select;
 use Filament\Forms\Set;
 use Illuminate\Support\Str;
+use Filament\Forms\Components\FileUpload;
 
 class LessonResource extends Resource
 {
@@ -47,14 +48,36 @@ class LessonResource extends Resource
                                 '12' => '12.Sınıf',
                                 'ekpss' => 'Kpss/Ekpss',
                             ]),
+                        Select::make('lesson_group')->required()
+                            ->options([
+                                'matematik' => 'Matematik',
+                                'edebiyat' => 'Türk Dili ve Edebiyatı',
+                                'fizik' => 'Fizik',
+                                'kimya' => 'Kimya',
+                                'biyoloji' => 'Biyoloji',
+                                'tarih' => 'Tarih',
+                                'cografya' => 'Coğrafya',
+                                'din' => 'Din Kültürü Ve Ahlak Bilgisi',
+                                'ingilizce' => 'İngilizce',
+                                'almanca' => 'Almanca',
+                            ]),
                         RichEditor::make('content')
                             ->fileAttachmentsDisk('s3')
                             ->fileAttachmentsDirectory('images')
                             ->columnSpan(2)
                             ->required(),
-                        TextInput::make('content_audio'),
-                        TextInput::make('text_file'),
-                        TextInput::make('audio_file'),
+                        FileUpload::make('content_audio')
+                            ->disk('s3')
+                            ->directory('form-audio-files')
+                            ->preserveFilenames(),
+                        FileUpload::make('text_file')
+                            ->disk('s3')
+                            ->directory('text-files')
+                            ->preserveFilenames(),
+                        FileUpload::make('audio_file')
+                            ->disk('s3')
+                            ->directory('audio-files')
+                            ->preserveFilenames(),
                     ]),
 
             ]);

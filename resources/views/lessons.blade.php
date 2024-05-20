@@ -26,96 +26,24 @@
 
         <!-- Tab Content -->
         <div id="9sinif" class="p-4 tab-content bg-white shadow-md rounded-lg">
-            <h2 class="text-2xl font-semibold mb-2 text-blue-700">9. Sınıf'a ait ders notları</h2>
-
-            @php
-                $lessonid = 9;
-            @endphp
-
-            @foreach( $lessons as $lesson)
-                @if($lesson->lesson_id == $lessonid)
-                    <tr>
-                        <td class="px-6 py-4 whitespace-nowrap">
-                            <div class="text-sm text-gray-900">
-                                <a class="text-xl" href="http://localhost:8000/ders/{{ $lesson->title_id }}">{{ $lesson->title }}</a>
-                            </div>
-                        </td>
-                    </tr>
-                @endif
-        @endforeach
-
+            <h2 class="text-2xl font-semibold mb-2 text-gray-900">9. Sınıf'a ait ders notları</h2>
+            @include('lists/nine')
         </div>
         <div id="10sinif" class="p-4 tab-content bg-white shadow-md rounded-lg hidden">
-            <h2 class="text-2xl font-semibold mb-2 text-blue-700">10. Sınıf'a ait ders notları</h2>
-            @php
-                $lessonid = 10;
-            @endphp
-
-            @foreach( $lessons as $lesson)
-                @if($lesson->lesson_id == $lessonid)
-                    <tr>
-                        <td class="px-6 py-4 whitespace-nowrap">
-                            <div class="text-sm text-gray-900">
-                                <a class="text-xl" href="http://localhost:8000/ders/{{ $lesson->title_id }}">{{ $lesson->title }}</a>
-                            </div>
-                        </td>
-                    </tr>
-                @endif
-            @endforeach
+            <h2 class="text-2xl font-semibold mb-2 text-gray-900">10. Sınıf'a ait ders notları</h2>
+            @include('lists/ten')
         </div>
         <div id="11sinif" class="p-4 tab-content bg-white shadow-md rounded-lg hidden">
-            <h2 class="text-2xl font-semibold mb-2 text-blue-700">11. Sınıf'a ait ders notları</h2>
-            @php
-                $lessonid = 11;
-            @endphp
-
-            @foreach( $lessons as $lesson)
-                @if($lesson->lesson_id == $lessonid)
-                    <tr>
-                        <td class="px-6 py-4 whitespace-nowrap">
-                            <div class="text-sm text-gray-900">
-                                <a class="text-xl" href="http://localhost:8000/ders/{{ $lesson->title_id }}">{{ $lesson->title }}</a>
-                            </div>
-                        </td>
-                    </tr>
-                @endif
-            @endforeach
+            <h2 class="text-2xl font-semibold mb-2 text-gray-900">11. Sınıf'a ait ders notları</h2>
+            @include('lists/eleven')
         </div>
         <div id="12sinif" class="p-4 tab-content bg-white shadow-md rounded-lg hidden">
-            <h2 class="text-2xl font-semibold mb-2 text-blue-700">12. Sınıf'a ait ders notları</h2>
-            @php
-                $lessonid = 12;
-            @endphp
-
-            @foreach( $lessons as $lesson)
-                @if($lesson->lesson_id == $lessonid)
-                    <tr>
-                        <td class="px-6 py-4 whitespace-nowrap">
-                            <div class="text-sm text-gray-900">
-                                <a class="text-xl" href="http://localhost:8000/ders/{{ $lesson->title_id }}">{{ $lesson->title }}</a>
-                            </div>
-                        </td>
-                    </tr>
-                @endif
-            @endforeach
+            <h2 class="text-2xl font-semibold mb-2 text-gray-900">12. Sınıf'a ait ders notları</h2>
+            @include('lists/twelve')
         </div>
         <div id="ekpss" class="p-4 tab-content bg-white shadow-md rounded-lg hidden">
-            <h2 class="text-2xl font-semibold mb-2 text-blue-700">Kpss/Ekpss'ye ait ders notları</h2>
-            @php
-                $lessonid = 'ekpss';
-            @endphp
-
-            @foreach( $lessons as $lesson)
-                @if($lesson->lesson_id == $lessonid)
-                    <tr>
-                        <td class="px-6 py-4 whitespace-nowrap">
-                            <div class="text-sm text-gray-900">
-                                <a class="text-xl" href="http://localhost:8000/ders/{{ $lesson->title_id }}">{{ $lesson->title }}</a>
-                            </div>
-                        </td>
-                    </tr>
-                @endif
-            @endforeach
+            <h2 class="text-2xl font-semibold mb-2 text-gray-900">Kpss/Ekpss'ye ait ders notları</h2>
+            @include('lists/ekpss')
         </div>
         <div class="bg-blue-500 p-2 rounded-b-lg w-full space-x-4" ><br><!-- Buradaki üşengeçliğimi sorgulama --><br></div>
     </div>
