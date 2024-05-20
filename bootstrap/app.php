@@ -12,8 +12,7 @@ return Application::configure(basePath: dirname(__DIR__))
     )
     ->withMiddleware(function (Middleware $middleware) {
         $middleware->trustProxies(at: [
-            '0.0.0.0',
-            'https://beyondofseen.com/*',
+            '*.beyondofseen.com',
         ]);
     })
     ->withExceptions(function (Exceptions $exceptions) {
