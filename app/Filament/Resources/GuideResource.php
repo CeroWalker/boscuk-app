@@ -22,6 +22,8 @@ use Filament\Forms\Components\Section;
 use Filament\Forms\Components\Select;
 use Filament\Forms\Set;
 use Illuminate\Support\Str;
+use Filament\Forms\Components\TagsInput;
+use Filament\Resources\Components\Tab;
 
 class GuideResource extends Resource
 {
@@ -87,6 +89,12 @@ class GuideResource extends Resource
             'index' => Pages\ListGuides::route('/'),
             'create' => Pages\CreateGuide::route('/create'),
             'edit' => Pages\EditGuide::route('/{record}/edit'),
+        ];
+    }
+    public function getTabs(): array
+    {
+        return [
+            'all' => Tab::make(),
         ];
     }
 }

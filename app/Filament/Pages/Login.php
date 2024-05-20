@@ -112,7 +112,7 @@ class Login extends SimplePage
             'form' => $this->form(
                 $this->makeForm()
                     ->schema([
-                        $this->getLoginFormComponent()->autocomplete('off')->placeholder('Username or Password'),
+                        $this->getLoginFormComponent()->autocomplete('off')->placeholder('Username or E-mail'),
                         $this->getPasswordFormComponent()->placeholder('Password'),
                         $this->getRememberFormComponent(),
                     ])

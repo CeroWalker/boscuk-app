@@ -34,7 +34,7 @@ class LessonResource extends Resource
         return $form
             ->schema([
                 Section::make()
-                    ->schema([  // Define fields within the section
+                    ->schema([
                         TextInput::make('title')->required()
                             ->live(onBlur: true)
                             ->afterStateUpdated(fn (Set $set, ?string $state) => $set('title_id', Str::slug($state))),
@@ -73,10 +73,6 @@ class LessonResource extends Resource
                         FileUpload::make('text_file')
                             ->disk('s3')
                             ->directory('text-files')
-                            ->preserveFilenames(),
-                        FileUpload::make('audio_file')
-                            ->disk('s3')
-                            ->directory('audio-files')
                             ->preserveFilenames(),
                     ]),
 

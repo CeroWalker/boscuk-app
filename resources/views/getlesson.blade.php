@@ -37,13 +37,13 @@
             @if($lesson->text_file == null)
                 <p>Pdf dosyası mevcut değil.</p>
             @else
-                <p>Pdf Dosyasını indirmek için <a href="{{ config('app_url') }}/storage/{{$lesson->text_file}}" class="btn btn-primary">Tıkla</a></p>
+                <p>Pdf Dosyasını indirmek için <a href="{{ config('app_url') }}/storage/{{$lesson->text_file}}" class="btn btn-primary" download>Tıkla</a></p>
             @endif
 
             @if($lesson->audio_file == null)
                 <p>Ses dosyası mevcut değil.</p>
             @else
-                <p>Ses Dosyasını indirmek için <a href="{{ config('app_url') }}/storage/{{$lesson->audio_file}}" class="btn btn-primary">Tıkla</a></p>
+                <p>Ses Dosyasını indirmek için <a href="{{ config('app_url') }}/storage/{{$lesson->content_audio}}" class="btn btn-primary" download>Tıkla</a></p>
             @endif
         </div>
 
