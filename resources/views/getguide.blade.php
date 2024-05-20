@@ -3,7 +3,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="{{ config('app.name') }} - {{ $guide->content }}">
+    <meta name="description" content="{{ $guide->content }}">
     <title>{{ config('app.name') }} - {{ $guide->title }}</title>
     <link rel="icon" href="https://drive.usercontent.google.com/download?id=17HlpXUMzsR23-x0BjLMDLIEDfyEH8n7A&export=download&authuser=0" type="image/png">
     <link rel="stylesheet" href="https://beyondofseen.com/css/style.css">
@@ -27,6 +27,8 @@
 
 <div class="bg-gray-900 text-white text-center py-20 mx-auto w-auto">
     <h1 class="text-4xl font-bold mb-4">{{ $guide->title }}</h1>
+
+    <iframe width="560" height="315" src="{{ $guide->video_link}}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
     <div class="grid grid-cols-1">
         <p class="text-l w-1/2 content-center text-center mx-auto">{!! nl2br($guide->content) !!}</p>

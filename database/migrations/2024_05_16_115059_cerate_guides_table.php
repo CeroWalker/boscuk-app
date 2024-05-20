@@ -15,6 +15,7 @@ return new class extends Migration
             $table->id();
             $table->string('title');
             $table->string('title_id');
+            $table->string('video_link')->nullable();
             $table->text('content');
             $table->timestamps();
         });

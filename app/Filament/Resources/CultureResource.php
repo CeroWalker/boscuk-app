@@ -8,6 +8,7 @@ use App\Models\Culture;
 use Faker\Provider\Text;
 use Filament\Actions\DeleteAction;
 use Filament\Forms;
+use Filament\Forms\Components\FileUpload;
 use Filament\Forms\Form;
 use Filament\Resources\Resource;
 use Filament\Tables;
@@ -40,13 +41,18 @@ class CultureResource extends Resource
                         TextInput::make('title')->required()
                             ->live(onBlur: true)
                             ->afterStateUpdated(fn (Set $set, ?string $state) => $set('title_id', Str::slug($state))),
+                        FileUpload::make('content_image')
+                            ->required()
+                            ->disk('s3')
+                            ->directory('content-image')
+                            ->preserveFilenames(),
                         TextInput::make('title_id')
                             ->prefix('https://beyondofseen.com/kultur/'),
                         RichEditor::make('content')
                             ->fileAttachmentsDisk('s3')
-                                ->fileAttachmentsDirectory('images')
-                                ->columnSpan(2)
-                                ->required(),
+                            ->fileAttachmentsDirectory('images')
+                            ->columnSpan(2)
+                            ->required(),
                     ]),
 
             ]);
