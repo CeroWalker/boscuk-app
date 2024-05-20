@@ -91,10 +91,4 @@ class GuideResource extends Resource
             'edit' => Pages\EditGuide::route('/{record}/edit'),
         ];
     }
-    public function getTabs(): array
-    {
-        return [
-            'all' => Tab::make(),
-        ];
-    }
 }
