@@ -30,7 +30,7 @@
 
     <iframe width="560" height="315" src="{{ $guide->video_link}}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
-    <div class="grid grid-cols-1">
+    <div class="grid grid-cols-1 px-5">
         <p class="text-l w-1/2 content-center text-center mx-auto">{!! nl2br($guide->content) !!}</p>
     </div>
 

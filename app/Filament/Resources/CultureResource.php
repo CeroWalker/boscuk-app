@@ -41,11 +41,6 @@ class CultureResource extends Resource
                         TextInput::make('title')->required()
                             ->live(onBlur: true)
                             ->afterStateUpdated(fn (Set $set, ?string $state) => $set('title_id', Str::slug($state))),
-                        FileUpload::make('content_image')
-                            ->required()
-                            ->disk('s3')
-                            ->directory('content-image')
-                            ->preserveFilenames(),
                         TextInput::make('title_id')
                             ->prefix('https://beyondofseen.com/kultur/'),
                         RichEditor::make('content')
@@ -53,6 +48,16 @@ class CultureResource extends Resource
                             ->fileAttachmentsDirectory('images')
                             ->columnSpan(2)
                             ->required(),
+                        FileUpload::make('content_image')
+                            ->required()
+                            ->disk('s3')
+                            ->directory('content-image')
+                            ->preserveFilenames(),
+                        FileUpload::make('content_audio')
+                            ->required()
+                            ->disk('s3')
+                            ->directory('content_audio')
+                            ->preserveFilenames(),
                     ]),
 
             ]);

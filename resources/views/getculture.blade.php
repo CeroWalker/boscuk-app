@@ -28,7 +28,11 @@
 <div class="bg-gray-900 text-white text-center py-20 mx-auto w-auto">
     <h1 class="text-4xl font-bold mb-4">{{ $culture->title }}</h1>
 
-    <div class="grid grid-cols-1">
+    <audio controls class="mx-auto">
+        <source src="{{ config('app_url') }}/storage/{{$lesson->content_audio}}" type="audio/mpeg">
+    </audio>
+
+    <div class="grid grid-cols-1 px-5">
         <p class="text-l w-1/2 content-center text-center mx-auto">{!! nl2br($culture->content) !!}</p>
     </div>
 

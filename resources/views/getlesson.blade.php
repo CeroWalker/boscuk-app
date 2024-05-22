@@ -29,7 +29,7 @@
         <audio controls class="mx-auto">
             <source src="{{ config('app_url') }}/storage/{{$lesson->content_audio}}" type="audio/mpeg">
         </audio>
-        <div class="grid grid-cols-1 px-">
+        <div class="grid grid-cols-1 px-5">
             <p class="text-l text-center mx-auto">{!! nl2br($lesson->content) !!}</p>
         </div>
 
