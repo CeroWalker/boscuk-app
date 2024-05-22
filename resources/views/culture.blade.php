@@ -16,7 +16,7 @@
         }
 
         #content_image{
-            height: 50%;
+            height: 20rem !important;
         }
 
         #culture{
