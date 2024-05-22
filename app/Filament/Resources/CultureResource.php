@@ -54,7 +54,6 @@ class CultureResource extends Resource
                             ->directory('content-image')
                             ->preserveFilenames(),
                         FileUpload::make('content_audio')
-                            ->required()
                             ->disk('s3')
                             ->directory('content_audio')
                             ->preserveFilenames(),
