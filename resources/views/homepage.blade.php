@@ -23,7 +23,7 @@
             <div class="max-w-md mx-auto bg-zinc-900 rounded-xl shadow-md overflow-hidden md:max-w-2xl">
                 <div class="relative">
                   <div class="md:shrink-0">
-                    <img class="w-full" src="{{ config('app_url') }}/images/derz.png" alt="Dersler sayfasının fotoğrafı">
+                      <a href="/dersler"><img class="w-full" src="{{ config('app_url') }}/images/derz.png" alt="Dersler sayfasının fotoğrafı"></a>
                   </div>
                   <div class="p-8">
                     <div class="uppercase tracking-wide text-sm text-cyan-300 font-semibold">Beyond Of Seen</div>
@@ -35,7 +35,7 @@
             <div class="max-w-md mx-auto bg-zinc-900 rounded-xl shadow-md overflow-hidden md:max-w-2xl">
                 <div class="relative">
                   <div class="md:shrink-0">
-                    <img class="w-full" src="{{ config('app_url') }}/images/tools.png" alt="Araçlar sayfasının fotoğrafı">
+                      <a href="/araclar"><img class="w-full" src="{{ config('app_url') }}/images/tools.png" alt="Araçlar sayfasının fotoğrafı"></a>
                   </div>
                   <div class="p-8">
                     <div class="uppercase tracking-wide text-sm text-cyan-300 font-semibold">Beyond Of Seen</div>
@@ -63,7 +63,7 @@
             <div class="max-w-md mx-auto bg-zinc-900 rounded-xl shadow-md overflow-hidden md:max-w-2xl">
                 <div class="relative">
                   <div class="md:shrink-0">
-                    <img class="w-full" src="{{ config('app_url') }}/images/culture.png" alt="Dersler fotoğraf">
+                      <a href="/genel-kultur"><img class="w-full" src="{{ config('app_url') }}/images/culture.png" alt="Dersler fotoğraf"></a>
                   </div>
                   <div class="p-8">
                     <div class="uppercase tracking-wide text-sm text-cyan-300 font-semibold">Beyond Of Seen</div>
@@ -75,7 +75,7 @@
             <div class="max-w-md mx-auto bg-zinc-900 rounded-xl shadow-md overflow-hidden md:max-w-2xl">
                 <div class="relative">
                   <div class="md:shrink-0">
-                    <img class="w-full" src="{{ config('app_url') }}/images/guides.png">
+                      <a href="/rehberler"><img class="w-full" src="{{ config('app_url') }}/images/guides.png"></a>
                   </div>
                   <div class="p-8">
                     <div class="uppercase tracking-wide text-sm text-cyan-300 font-semibold">Beyond Of Seen</div>
