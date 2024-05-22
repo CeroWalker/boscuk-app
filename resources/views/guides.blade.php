@@ -14,9 +14,6 @@
     @foreach($guides as $guide)
         <div id="guide" class="bg-white rounded-xl shadow-md overflow-hidden">
             <a class="text-gray-500 text-sm" href="{{ config('app.url') }}/kultur/{{ $guide->title_id }}">
-                <div class="relative">
-                    <img id="content_image" class="w-full object-cover" src="{{ config('app.url') }}/storage/{{ $guide->content_image }}">
-                </div>
                 <div class="p-4">
                     <div class="text-lg font-medium text-gray-800 mb-2">{{ $guide->title }}</div>
                     {!! mb_substr($guide->content, 0, 310,) !!}
