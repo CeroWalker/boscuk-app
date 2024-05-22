@@ -15,6 +15,10 @@
             }
         }
 
+        #content_image{
+            height: 50%;
+        }
+
     </style>
 </head>
 @include("comps/header")
@@ -30,7 +34,7 @@
     @foreach($cultures as $culture)
         <div class="bg-white rounded-xl shadow-md overflow-hidden">
             <div class="relative">
-                <img class="w-full h-1/2 object-cover" src="{{ config('app.url') }}/storage/{{ $culture->content_image }}">
+                <img id="content_image" class="w-full object-cover" src="{{ config('app.url') }}/storage/{{ $culture->content_image }}">
             </div>
             <div class="p-4">
                 <div class="text-lg font-medium text-gray-800 mb-2">{{ $culture->title }}</div>
