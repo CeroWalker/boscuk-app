@@ -15,10 +15,6 @@ use  App\Http\Controllers\ToolsController;
 use  App\Http\Controllers\GamesController;
 
 Route::get('/', function () {
-    return view('working');
-});
-
-Route::get('/test', function () {
     return view('homepage');
 });
 
