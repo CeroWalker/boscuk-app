@@ -1,6 +1,21 @@
 <html lang="tr">
 <head>
     @include("comps/requirement")
+    <style>
+        @media only screen and (min-device-width: 767px) {
+            #pagination{
+                padding-left: 5rem;
+                padding-right: 5rem;
+            }
+        }
+        @media only screen and (max-device-width: 767px){
+            #pagination{
+                padding-left: 2.5rem;
+                padding-right: 2.5rem;
+            }
+        }
+
+    </style>
 </head>
 @include("comps/header")
 @include('comps/tawk')
@@ -25,7 +40,7 @@
     @endforeach
 </div>
 
-<div class="px-20"> {{ $cultures->links() }} </div>
+<div id="pagination"> {{ $cultures->links() }} </div>
 
 
 @include("comps/footer")
