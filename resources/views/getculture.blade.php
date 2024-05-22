@@ -29,10 +29,11 @@
     <h1 class="text-4xl font-bold mb-4">{{ $culture->title }}</h1>
 
     <audio controls class="mx-auto">
-        <source src="{{ config('app_url') }}/storage/{{$lesson->content_audio}}" type="audio/mpeg">
+        <source src="{{ config('app_url') }}/storage/{{$culture->content_audio}}" type="audio/mpeg">
     </audio>
 
-    <div class="grid grid-cols-1 px-5">
+    <div class="grid grid-cols-1 px-10">
+        <img class="flex place-self-center my-6" src="{{ config('app.url') }}/storage/{{ $culture->content_image }}">
         <p class="text-l w-1/2 content-center text-center mx-auto">{!! nl2br($culture->content) !!}</p>
     </div>
 

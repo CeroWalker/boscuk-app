@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Lessons;
 use Illuminate\Http\Request;
 use App\Models\Culture;
 
@@ -12,7 +13,9 @@ class CulturesController extends Controller
      */
     public function index()
     {
-        return view('culture');
+        $cultures = Culture::all();
+
+        return view('culture', compact('cultures'));
     }
 
     /**

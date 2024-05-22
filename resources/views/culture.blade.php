@@ -12,38 +12,17 @@
 </header>
 <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 p-10 md:px-20 md:mt-10">
 
-    <div class="bg-white rounded-xl shadow-md overflow-hidden">
-        <div class="relative">
-            <img class="w-full h-auto object-cover" src="{{ config('app_url') }}/images/coming.png">
+    @foreach($cultures as $culture)
+        <div class="bg-white rounded-xl shadow-md overflow-hidden">
+            <div class="relative">
+                <img class="w-full h-1/2 object-cover" src="{{ config('app.url') }}/storage/{{ $culture->content_image }}">
+            </div>
+            <div class="p-4">
+                <div class="text-lg font-medium text-gray-800 mb-2">{{ $culture->title }}</div>
+                <a class="text-gray-500 text-sm h-auto" href="{{ config('app.url') }}/kultur/{{ $culture->title_id }}">{!! mb_substr($culture->content, 0, 310,) !!}</a>
+            </div>
         </div>
-        <div class="p-4">
-            <div class="text-lg font-medium text-gray-800 mb-2">Çok Yakında</div>
-            <p class="text-gray-500 text-sm">Çok Yakında...</p>
-        </div>
-    </div>
-
-
-    <div class="bg-white rounded-xl shadow-md overflow-hidden">
-        <div class="relative">
-            <img class="w-full h-auto object-cover" src="{{ config('app_url') }}/images/coming.png">
-        </div>
-        <div class="p-4">
-            <div class="text-lg font-medium text-gray-800 mb-2">Çok Yakında</div>
-            <p class="text-gray-500 text-sm">Çok Yakında...</p>
-        </div>
-    </div>
-
-
-    <div class="bg-white rounded-xl shadow-md overflow-hidden">
-        <div class="relative">
-            <img class="w-full h-auto object-cover" src="{{ config('app_url') }}/images/coming.png">
-        </div>
-        <div class="p-4">
-            <div class="text-lg font-medium text-gray-800 mb-2">Çok Yakında</div>
-            <p class="text-gray-500 text-sm">Çok Yakında...</p>
-        </div>
-    </div>
-
+    @endforeach
 
 </div>
 @include("comps/footer")
