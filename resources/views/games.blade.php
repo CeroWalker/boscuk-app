@@ -14,29 +14,17 @@
 
     <div class="bg-white rounded-xl shadow-md overflow-hidden">
         <div class="relative">
-            <img class="w-full h-auto object-cover" src="https://beyondofseen.com/images/znake.png">
+            <img class="w-full h-auto object-cover" src="{{ config('app_url') }}/images/tod.png">
         </div>
         <div class="p-4">
-            <div class="text-lg font-medium text-gray-800 mb-2">Znake (Snake)</div>
-            <p class="text-gray-500 text-sm">Yılların eskitemediği yılan oyunu şimdi sizlerle. Hemen tıklayın ve oynamaya başlayın!</p>
+            <div class="text-lg font-medium text-gray-800 mb-2">Doğruluk mu? Cesaretlik mi? </div>
+            <p class="text-gray-500 text-sm">Arkadaşlarınla ne kadar samimi olduğunu ve ne kadar cesur olduğunu test etmeye hazır mısın? Doğruluk mu Cesaret mi oyunu tam sana göre! Bu klasik oyun, ister yeni tanıştığın biriyle ister yıllardır tanıdığın bir dostunla oyna ister misin, her zaman eğlence ve heyecan dolu bir deneyim sunar.</p>
         </div>
     </div>
 
-
     <div class="bg-white rounded-xl shadow-md overflow-hidden">
         <div class="relative">
-            <img class="w-full h-auto object-cover" src="https://beyondofseen.com/images/tetris.png">
-        </div>
-        <div class="p-4">
-            <div class="text-lg font-medium text-gray-800 mb-2">Tetris</div>
-            <p class="text-gray-500 text-sm">Kendimizi oynamaktan alıkoyamadığımız, blokların arasında kaybolduğumuz o efsane Tetris oyunu. Tıklayın ve oynayın!</p>
-        </div>
-    </div>
-
-
-    <div class="bg-white rounded-xl shadow-md overflow-hidden">
-        <div class="relative">
-            <img class="w-full h-auto object-cover" src="https://beyondofseen.com/images/coming.png">
+            <img class="w-full h-auto object-cover" src="{{ config('app_url') }}/images/coming.png">
         </div>
         <div class="p-4">
             <div class="text-lg font-medium text-gray-800 mb-2">Çok Yakında</div>
@@ -46,36 +34,13 @@
 
     <div class="bg-white rounded-xl shadow-md overflow-hidden">
         <div class="relative">
-            <img class="w-full h-auto object-cover" src="https://beyondofseen.com/images/coming.png">
+            <img class="w-full h-auto object-cover" src="{{ config('app_url') }}/images/coming.png">
         </div>
         <div class="p-4">
             <div class="text-lg font-medium text-gray-800 mb-2">Çok Yakında</div>
             <p class="text-gray-500 text-sm">Çok Yakında...</p>
         </div>
     </div>
-
-
-    <div class="bg-white rounded-xl shadow-md overflow-hidden">
-        <div class="relative">
-            <img class="w-full h-auto object-cover" src="https://beyondofseen.com/images/coming.png">
-        </div>
-        <div class="p-4">
-            <div class="text-lg font-medium text-gray-800 mb-2">Çok Yakında</div>
-            <p class="text-gray-500 text-sm">Çok Yakında...</p>
-        </div>
-    </div>
-
-
-    <div class="bg-white rounded-xl shadow-md overflow-hidden">
-        <div class="relative">
-            <img class="w-full h-auto object-cover" src="{{asset('https://beyondofseen.com/images/coming.png')}}">
-        </div>
-        <div class="p-4">
-            <div class="text-lg font-medium text-gray-800 mb-2">Çok Yakında</div>
-            <p class="text-gray-500 text-sm">Çok Yakında...</p>
-        </div>
-    </div>
-
 
 </div>
 @include("comps/footer")

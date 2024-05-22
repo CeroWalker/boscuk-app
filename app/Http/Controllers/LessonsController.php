@@ -17,6 +17,20 @@ class LessonsController extends Controller
         return view('lessons', compact('lessons'));
     }
 
+    public function search(Request $request){
+
+        $search = $request->search;
+
+        $lessons = Lessons::where(function($query) use ($search){
+
+            $query->where('title','like',"%$search%");
+        })
+            ->get();
+
+        return view('lessons',compact('lessons','search'));
+
+    }
+
     /**
      * Show the form for creating a new resource.
      */
@@ -38,9 +52,7 @@ class LessonsController extends Controller
      */
     public function show(string $lesson_id)
     {
-        $data['lessons'] = Lessons::query()->where('lesson_id', $lesson_id)->get()->firstOrFail();
-        return view('lessons', $data);
-
+        //
     }
 
     /**
