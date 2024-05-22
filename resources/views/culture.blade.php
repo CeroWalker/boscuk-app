@@ -37,15 +37,15 @@
 
     @foreach($cultures as $culture)
         <div id="culture" class="bg-white rounded-xl shadow-md overflow-hidden">
+            <a class="text-gray-500 text-sm" href="{{ config('app.url') }}/kultur/{{ $culture->title_id }}">
             <div class="relative">
                 <img id="content_image" class="w-full object-cover" src="{{ config('app.url') }}/storage/{{ $culture->content_image }}">
             </div>
             <div class="p-4">
-                <a id="title_id" class="text-gray-500 text-sm" href="{{ config('app.url') }}/kultur/{{ $culture->title_id }}">
                     <div class="text-lg font-medium text-gray-800 mb-2">{{ $culture->title }}</div>
                     {!! mb_substr($culture->content, 0, 310,) !!}
-                </a>
             </div>
+            </a>
         </div>
     @endforeach
 </div>
