@@ -11,37 +11,19 @@
     </div>
 </header>
 <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 p-10 md:px-20 md:mt-10">
-    <div class="bg-white rounded-xl shadow-md overflow-hidden">
-        <div class="relative">
-            <img class="w-full h-auto object-cover" src="https://beyondofseen.com/images/coming.png">
+    @foreach($guides as $guide)
+        <div id="guide" class="bg-white rounded-xl shadow-md overflow-hidden">
+            <a class="text-gray-500 text-sm" href="{{ config('app.url') }}/kultur/{{ $guide->title_id }}">
+                <div class="relative">
+                    <img id="content_image" class="w-full object-cover" src="{{ config('app.url') }}/storage/{{ $guide->content_image }}">
+                </div>
+                <div class="p-4">
+                    <div class="text-lg font-medium text-gray-800 mb-2">{{ $guide->title }}</div>
+                    {!! mb_substr($guide->content, 0, 310,) !!}
+                </div>
+            </a>
         </div>
-        <div class="p-4">
-            <div class="text-lg font-medium text-gray-800 mb-2">Çok Yakında</div>
-            <p class="text-gray-500 text-sm">Çok Yakında...</p>
-        </div>
-    </div>
-
-
-    <div class="bg-white rounded-xl shadow-md overflow-hidden">
-        <div class="relative">
-            <img class="w-full h-auto object-cover" src="https://beyondofseen.com/images/coming.png">
-        </div>
-        <div class="p-4">
-            <div class="text-lg font-medium text-gray-800 mb-2">Çok Yakında</div>
-            <p class="text-gray-500 text-sm">Çok Yakında...</p>
-        </div>
-    </div>
-
-
-    <div class="bg-white rounded-xl shadow-md overflow-hidden">
-        <div class="relative">
-            <img class="w-full h-auto object-cover" src="{{asset('https://beyondofseen.com/images/coming.png')}}">
-        </div>
-        <div class="p-4">
-            <div class="text-lg font-medium text-gray-800 mb-2">Çok Yakında</div>
-            <p class="text-gray-500 text-sm">Çok Yakında...</p>
-        </div>
-    </div>
+    @endforeach
 
 
 </div>

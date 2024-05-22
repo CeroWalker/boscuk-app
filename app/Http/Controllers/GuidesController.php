@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Guide;
 use Illuminate\Http\Request;
 
 class GuidesController extends Controller
@@ -11,7 +12,9 @@ class GuidesController extends Controller
      */
     public function index()
     {
-        return view('guides');
+        $guides = Guide::paginate(6);
+
+        return view('guides', compact('guides'));
     }
 
     /**
