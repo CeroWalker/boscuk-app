@@ -19,6 +19,10 @@
             height: 50%;
         }
 
+        #culture{
+            height: fit-content;
+        }
+
     </style>
 </head>
 @include("comps/header")
@@ -32,13 +36,15 @@
 <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 p-10 md:px-20 md:mt-10">
 
     @foreach($cultures as $culture)
-        <div class="bg-white rounded-xl shadow-md overflow-hidden">
+        <div id="culture" class="bg-white rounded-xl shadow-md overflow-hidden">
             <div class="relative">
                 <img id="content_image" class="w-full object-cover" src="{{ config('app.url') }}/storage/{{ $culture->content_image }}">
             </div>
             <div class="p-4">
-                <div class="text-lg font-medium text-gray-800 mb-2">{{ $culture->title }}</div>
-                <a class="text-gray-500 text-sm h-auto" href="{{ config('app.url') }}/kultur/{{ $culture->title_id }}">{!! mb_substr($culture->content, 0, 310,) !!}</a>
+                <a id="title_id" class="text-gray-500 text-sm" href="{{ config('app.url') }}/kultur/{{ $culture->title_id }}">
+                    <div class="text-lg font-medium text-gray-800 mb-2">{{ $culture->title }}</div>
+                    {!! mb_substr($culture->content, 0, 310,) !!}
+                </a>
             </div>
         </div>
     @endforeach
