@@ -23,36 +23,36 @@
             <div class="max-w-md mx-auto bg-zinc-900 rounded-xl shadow-md overflow-hidden md:max-w-2xl">
                 <div class="relative">
                   <div class="md:shrink-0">
-                    <img class="w-full" src="https://beyondofseen.com/images/derz.png" alt="Dersler fotoğraf">
+                    <img class="w-full" src="{{ config('app_url') }}/images/derz.png" alt="Dersler sayfasının fotoğrafı">
                   </div>
                   <div class="p-8">
                     <div class="uppercase tracking-wide text-sm text-cyan-300 font-semibold">Beyond Of Seen</div>
                     <a href="/dersler" class="block mt-1 text-lg leading-tight font-medium text-slate-100 hover:underline">Okul ve Sınav Notlarımız</a>
-                    <p class="mt-2 text-white">9-10-11-12 ve KPSS ders notlarımızı gönüllü ekibimiz tarafından seslendirip sizlerin kullanımına sunuyoruz.</p>
+                    <p class="mt-2 text-white">Bu sayfada, 9. 10. 11. 12. sınıflar ve KPSS için gerekli tüm derslerin notlarını bulabilirsiniz. Notlarımız, güncel müfredata uygun şekilde düzenlenmiştir. Ayrıca, tüm notlarımız gönüllü ekibimiz tarafından seslendirilerek sizlere sunulmuştur.</p>
                   </div>
                 </div>
               </div>
             <div class="max-w-md mx-auto bg-zinc-900 rounded-xl shadow-md overflow-hidden md:max-w-2xl">
                 <div class="relative">
                   <div class="md:shrink-0">
-                    <img class="w-full" src="https://beyondofseen.com/images/tools.png" alt="">
+                    <img class="w-full" src="{{ config('app_url') }}/images/tools.png" alt="Araçlar sayfasının fotoğrafı">
                   </div>
                   <div class="p-8">
                     <div class="uppercase tracking-wide text-sm text-cyan-300 font-semibold">Beyond Of Seen</div>
-                    <a href="#" class="block mt-1 text-lg leading-tight font-medium text-slate-100 hover:underline">Araçlar</a>
-                    <p class="mt-2 text-white">İnternetten üzerinden aklınıza gelebilecek bütün araçları burada bulup kullanabilirsiniz</p>
+                    <a href="/araclar" class="block mt-1 text-lg leading-tight font-medium text-slate-100 hover:underline">Araçlar</a>
+                    <p class="mt-2 text-white">Bu sayfamızda, internette ihtiyacınız olabilecek her türlü araca erişebilirsiniz. Dosya dönüştürme araçlarından hesaplama araçlarına kadar geniş bir yelpazede araçlar sizleri bekliyor.</p>
                   </div>
                 </div>
               </div>
              <div class="max-w-md mx-auto bg-zinc-900 rounded-xl shadow-md overflow-hidden md:max-w-2xl">
                 <div class="relative">
                   <div class="md:shrink-0">
-                    <img class="w-full" src="https://beyondofseen.com/images/gamez.png" alt="">
+                    <img class="w-full" src="{{ config('app_url') }}/images/gamez.png" alt="Oyunlar sayfasının fotoğrafı">
                   </div>
                   <div class="p-8">
                     <div class="uppercase tracking-wide text-sm text-cyan-300 font-semibold">Beyond Of Seen</div>
-                    <a href="#" class="block mt-1 text-lg leading-tight font-medium text-slate-100 hover:underline">Oyunlar</a>
-                    <p class="mt-2 text-white">Eskiden kendinizi oynamaktan alıkoyamadığınız oyunları bu sayfada tekrardan oynama fırsatını elde edebilirsiniz</p>
+                    <a href="/oyunlar" class="block mt-1 text-lg leading-tight font-medium text-slate-100 hover:underline">Oyunlar</a>
+                    <p class="mt-2 text-white">Bu sayfamızda, eskiden severek oynadığınız klasik oyunları yeniden keşfedebilirsiniz. Eğlenceli ve nostaljik bir deneyim yaşayabilir, arkadaşlarınızla keyifli vakit geçirebilirsiniz.</p>
                   </div>
                 </div>
               </div>
@@ -63,36 +63,24 @@
             <div class="max-w-md mx-auto bg-zinc-900 rounded-xl shadow-md overflow-hidden md:max-w-2xl">
                 <div class="relative">
                   <div class="md:shrink-0">
-                    <img class="w-full" src="https://beyondofseen.com/images/derz.png" alt="Dersler fotoğraf">
+                    <img class="w-full" src="{{ config('app_url') }}/images/culture.png" alt="Dersler fotoğraf">
                   </div>
                   <div class="p-8">
                     <div class="uppercase tracking-wide text-sm text-cyan-300 font-semibold">Beyond Of Seen</div>
-                    <a href="/dersler" class="block mt-1 text-lg leading-tight font-medium text-slate-100 hover:underline">Okul ve Sınav Notlarımız</a>
-                    <p class="mt-2 text-white">9-10-11-12 ve KPSS ders notlarımızı gönüllü ekibimiz tarafından seslendirip sizlerin kullanımına sunuyoruz.</p>
+                    <a href="/genel-kultur" class="block mt-1 text-lg leading-tight font-medium text-slate-100 hover:underline">Genel Kültür</a>
+                    <p class="mt-2 text-white">Bu sayfamızda, ünlü isimler ve hayatları hakkında bilgilere ulaşabilirsiniz. Farklı alanlardan birçok ünlü ismin biyografisini okuyabilir, genel kültürünüzü geliştirebilirsiniz</p>
                   </div>
                 </div>
               </div>
             <div class="max-w-md mx-auto bg-zinc-900 rounded-xl shadow-md overflow-hidden md:max-w-2xl">
                 <div class="relative">
                   <div class="md:shrink-0">
-                    <img class="w-full" src="https://beyondofseen.com/images/tools.png" alt="">
+                    <img class="w-full" src="{{ config('app_url') }}/images/guides.png">
                   </div>
                   <div class="p-8">
                     <div class="uppercase tracking-wide text-sm text-cyan-300 font-semibold">Beyond Of Seen</div>
-                    <a href="#" class="block mt-1 text-lg leading-tight font-medium text-slate-100 hover:underline">Araçlar</a>
-                    <p class="mt-2 text-white">İnternetten üzerinden aklınıza gelebilecek bütün araçları burada bulup kullanabilirsiniz</p>
-                  </div>
-                </div>
-              </div>
-             <div class="max-w-md mx-auto bg-zinc-900 rounded-xl shadow-md overflow-hidden md:max-w-2xl">
-                <div class="relative">
-                  <div class="md:shrink-0">
-                    <img class="w-full" src="https://beyondofseen.com/images/gamez.png" alt="">
-                  </div>
-                  <div class="p-8">
-                    <div class="uppercase tracking-wide text-sm text-cyan-300 font-semibold">Beyond Of Seen</div>
-                    <a href="#" class="block mt-1 text-lg leading-tight font-medium text-slate-100 hover:underline">Oyunlar</a>
-                    <p class="mt-2 text-white">Eskiden kendinizi oynamaktan alıkoyamadığınız oyunları bu sayfada tekrardan oynama fırsatını elde edebilirsiniz</p>
+                    <a href="/rehberler" class="block mt-1 text-lg leading-tight font-medium text-slate-100 hover:underline">Rehberler</a>
+                    <p class="mt-2 text-white">Bu sayfamızda, günlük hayatınızda size yardımcı olacak çeşitli konularda bilgi ve ipuçları sunan bir sayfadır. Gönüllü ekibimiz tarafından özenle hazırlanan rehberler ile hayatınızı kolaylaştırabilir, yeni beceriler kazanabilirsiniz.</p>
                   </div>
                 </div>
               </div>

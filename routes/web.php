@@ -26,6 +26,7 @@ Route::get('oyun/dc', function (){
     return view('games/tod');
 });
 
+
 Route::resource('/dersler', LessonsController::class);
 Route::resource('/ders', LessonController::class);
 Route::get('/search-lesson',[LessonsController::class,'search']);
