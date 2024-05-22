@@ -23,7 +23,10 @@
             </div>
         </div>
     @endforeach
-
 </div>
+
+<div class="px-20"> {{ $cultures->links() }} </div>
+
+
 @include("comps/footer")
 </html>

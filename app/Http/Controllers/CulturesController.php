@@ -13,7 +13,7 @@ class CulturesController extends Controller
      */
     public function index()
     {
-        $cultures = Culture::all();
+        $cultures = Culture::paginate(6);
 
         return view('culture', compact('cultures'));
     }
