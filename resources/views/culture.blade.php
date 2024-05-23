@@ -56,5 +56,7 @@
 <div id="pagination"> {{ $cultures->links() }} </div>
 
 @include("comps/ads")
+@include("comps/ads")
+
 @include("comps/footer")
 </html>
