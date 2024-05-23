@@ -47,7 +47,7 @@
             </div>
             <div class="p-4">
                     <div class="text-lg font-medium text-gray-800 mb-2">{{ $culture->title }}</div>
-                    {!! mb_substr($culture->content, 0, 310,) !!}
+                    <p> Bu yazımız {{ $culture->title }} hakkında genel bilgi edinmenize yardımcı olacaktır. Hemen tıklayın ve okuyun. </p>
             </div>
             </a>
         </div>
