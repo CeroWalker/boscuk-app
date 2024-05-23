@@ -23,6 +23,10 @@
             height: fit-content;
         }
 
+        iframe{
+            margin-top: 3rem;
+        }
+
     </style>
 </head>
 @include("comps/header")
@@ -49,9 +53,8 @@
         </div>
     @endforeach
 </div>
-
 <div id="pagination"> {{ $cultures->links() }} </div>
 
-
+@include("comps/ads")
 @include("comps/footer")
 </html>
