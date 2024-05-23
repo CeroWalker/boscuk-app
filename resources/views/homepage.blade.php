@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="x-ua-compatible" content="ie=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="{{ config('app.name') }} sitemiin ana sayfası. Tıkla ve içeriklerin sınırsızlığını keşfet">
+  <meta name="description" content="{{ config('app.name') }} sitemizin ana sayfası. Tıkla ve içeriklerin sınırsızlığını keşfet">
   <title>{{ config('app.name') }}</title>
   @include('comps/home')
 </head>
