@@ -15,7 +15,7 @@
     <header class="bg-gray-900 text-white text-center py-20">
         <div class="container mx-auto">
             <h1 class="text-4xl font-bold mb-4">Beyond Of Seen'e Hoşgeldiniz</h1>
-            <p class="text-lg">İçeriklerin sınırsızlığını keşfedina</p>
+            <p class="text-lg">İçeriklerin sınırsızlığını keşfedin</p>
         </div>
     </header>
     <main class="container mx-auto">

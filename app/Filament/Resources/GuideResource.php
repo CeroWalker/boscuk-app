@@ -40,9 +40,9 @@ class GuideResource extends Resource
                         TextInput::make('title')->required()
                             ->live(onBlur: true)
                             ->afterStateUpdated(fn (Set $set, ?string $state) => $set('title_id', Str::slug($state))),
-                        TextInput::make('video_link'),
                         TextInput::make('title_id')
                             ->prefix('https://beyondofseen.com/rehber/'),
+                        TextInput::make('video_link'),
                         RichEditor::make('content')
                             ->fileAttachmentsDisk('s3')
                             ->fileAttachmentsDirectory('images')

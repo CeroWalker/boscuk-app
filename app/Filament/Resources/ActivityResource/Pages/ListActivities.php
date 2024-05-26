@@ -1,14 +1,14 @@
 <?php
 
-namespace App\Filament\Resources\GuideResource\Pages;
+namespace App\Filament\Resources\ActivityResource\Pages;
 
-use App\Filament\Resources\GuideResource;
+use App\Filament\Resources\ActivityResource;
 use Filament\Actions;
 use Filament\Resources\Pages\ListRecords;
 
-class ListGuides extends ListRecords
+class ListActivities extends ListRecords
 {
-    protected static string $resource = GuideResource::class;
+    protected static string $resource = ActivityResource::class;
 
     protected function getHeaderActions(): array
     {

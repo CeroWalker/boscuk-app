@@ -11,12 +11,11 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('guides', function (Blueprint $table) {
+        Schema::create('activities', function (Blueprint $table) {
             $table->id();
-            $table->string('title');
-            $table->string('title_id');
-            $table->string('video_link')->nullable();
-            $table->text('content');
+            $table->string('user');
+            $table->string('activity');
+            $table->string('description');
             $table->timestamps();
         });
     }

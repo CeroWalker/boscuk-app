@@ -2,9 +2,9 @@
 
 namespace App\Filament\Resources;
 
-use App\Filament\Resources\QuizQuestionsResource\Pages;
-use App\Filament\Resources\QuizQuestionsResource\RelationManagers;
-use App\Models\QuizQuestions;
+use App\Filament\Resources\ActivityResource\Pages;
+use App\Filament\Resources\ActivityResource\RelationManagers;
+use App\Models\Activity;
 use Filament\Forms;
 use Filament\Forms\Components\FileUpload;
 use Filament\Forms\Components\RichEditor;
@@ -15,14 +15,15 @@ use Filament\Forms\Form;
 use Filament\Forms\Set;
 use Filament\Resources\Resource;
 use Filament\Tables;
+use Filament\Tables\Columns\TextColumn;
 use Filament\Tables\Table;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\SoftDeletingScope;
 use Illuminate\Support\Str;
 
-class QuizQuestionsResource extends Resource
+class ActivityResource extends Resource
 {
-    protected static ?string $model = QuizQuestions::class;
+    protected static ?string $model = Activity::class;
 
     protected static ?string $navigationIcon = 'heroicon-o-rectangle-stack';
 
@@ -32,16 +33,9 @@ class QuizQuestionsResource extends Resource
             ->schema([
                 Section::make()
                     ->schema([
-                        TextInput::make('title')->required()
-                            ->live(onBlur: true)
-                            ->afterStateUpdated(fn (Set $set, ?string $state) => $set('title_id', Str::slug($state))),
-                        TextInput::make('title_id')
-                            ->prefix('https://beyondofseen.com/ders/'),
-                        RichEditor::make('content')
-                            ->fileAttachmentsDisk('s3')
-                            ->fileAttachmentsDirectory('images')
-                            ->columnSpan(2)
-                            ->required(),
+                        TextInput::make('user')->required(),
+                        TextInput::make('activity')->required(),
+                        TextInput::make('description')->required(),
                     ]),
 
             ]);
@@ -51,14 +45,15 @@ class QuizQuestionsResource extends Resource
     {
         return $table
             ->columns([
-                //
+                TextColumn::make('user'),
+                TextColumn::make('activity'),
+                TextColumn::make('description'),
             ])
             ->filters([
                 //
             ])
             ->actions([
                 Tables\Actions\EditAction::make(),
-                Tables\Actions\DeleteAction::make(),
             ])
             ->bulkActions([
                 Tables\Actions\BulkActionGroup::make([
@@ -77,9 +72,9 @@ class QuizQuestionsResource extends Resource
     public static function getPages(): array
     {
         return [
-            'index' => Pages\ListQuizQuestions::route('/'),
-            'create' => Pages\CreateQuizQuestions::route('/create'),
-            'edit' => Pages\EditQuizQuestions::route('/{record}/edit'),
+            'index' => Pages\ListActivities::route('/'),
+            'create' => Pages\CreateActivity::route('/create'),
+            'edit' => Pages\EditActivity::route('/{record}/edit'),
         ];
     }
 }
