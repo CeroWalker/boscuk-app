@@ -28,7 +28,7 @@ class CultureResource extends Resource
 {
     protected static ?string $model = Culture::class;
 
-    protected static ?string $navigationIcon = 'heroicon-o-rectangle-stack';
+    protected static ?string $navigationIcon = 'heroicon-o-bookmark-square';
     protected static ?string $navigationLabel = 'General Culture';
     protected static ?string $label = 'General Culture';
 
