@@ -48,8 +48,8 @@ class ActivityResource extends Resource
                 TextColumn::make('user'),
                 TextColumn::make('activity'),
                 TextColumn::make('description'),
-				TextColumn::make( 'created_at')->label('Created At'),
-                TextColumn::make( 'updated_at')->label('Edited At'),
+				TextColumn::make('created_at')->label('Created At'),
+                TextColumn::make('updated_at')->label('Edited At'),
             ])
             ->filters([
                 //
