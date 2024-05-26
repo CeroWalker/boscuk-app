@@ -14,6 +14,7 @@ use Filament\Tables\Columns\IconColumn;
 class getLogs extends BaseWidget
 {
     protected int | string | array $columnSpan = 'full';
+    protected static ?int $sort = 2;
 
     protected static ?string $heading = 'Current Activities';
 
