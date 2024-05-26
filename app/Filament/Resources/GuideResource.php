@@ -59,6 +59,8 @@ class GuideResource extends Resource
             ->columns([
                 TextColumn::make('title'),
                 TextColumn::make('title_id')->label('Link'),
+                TextColumn::make('created_at')->label('Created At'),
+                TextColumn::make('edited_at')->label('Edited At'),
 
             ])
             ->filters([
