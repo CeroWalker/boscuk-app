@@ -68,6 +68,8 @@ class CultureResource extends Resource
             ->columns([
                 TextColumn::make('title'),
                 TextColumn::make('title_id'),
+				TextColumn::make( 'created_at')->label('Created At'),
+                TextColumn::make( 'updated_at')->label('Edited At'),
             ])
             ->filters([
                 //
