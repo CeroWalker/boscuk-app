@@ -22,25 +22,16 @@
         </div>
     </div>
 
-    <div class="bg-white rounded-xl shadow-md overflow-hidden">
-        <div class="relative">
-            <img class="w-full h-auto object-cover" src="{{ config('app_url') }}/images/coming.png">
+    @foreach($games as $game)
+        <div id="guide" class="bg-white rounded-xl shadow-md overflow-hidden">
+            <a class="text-gray-500 text-sm" href="{{ config('app.url') }}/oyunlar/{{ $game->title_id }}">
+                <div class="p-4">
+                    <div class="text-lg font-medium text-gray-800 mb-2">{{ $game->title }}</div>
+                    {!! mb_substr($game->description, 0, 310,) !!}
+                </div>
+            </a>
         </div>
-        <div class="p-4">
-            <div class="text-lg font-medium text-gray-800 mb-2">Çok Yakında</div>
-            <p class="text-gray-500 text-sm">Çok Yakında...</p>
-        </div>
-    </div>
-
-    <div class="bg-white rounded-xl shadow-md overflow-hidden">
-        <div class="relative">
-            <img class="w-full h-auto object-cover" src="{{ config('app_url') }}/images/coming.png">
-        </div>
-        <div class="p-4">
-            <div class="text-lg font-medium text-gray-800 mb-2">Çok Yakında</div>
-            <p class="text-gray-500 text-sm">Çok Yakında...</p>
-        </div>
-    </div>
+    @endforeach
 
 </div>
 @include("comps/footer")

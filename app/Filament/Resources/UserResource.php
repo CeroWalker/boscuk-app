@@ -29,7 +29,7 @@ class UserResource extends Resource
         return $form
             ->schema([
                 Section::make()
-                    ->schema([  // Define fields within the section
+                    ->schema([
                         TextInput::make('name')->required(),
                         TextInput::make('email')->required()->email(),
                         TextInput::make('password')->required()->password(),
@@ -43,6 +43,8 @@ class UserResource extends Resource
             ->columns([
                 TextColumn::make('name'),
                 TextColumn::make('email'),
+                TextColumn::make("edited_at"),
+                TextColumn::make("created_at"),
             ])
             ->filters([
                 //

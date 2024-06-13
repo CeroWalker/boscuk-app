@@ -36,9 +36,10 @@ class GuidesController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(string $id)
+    public function show(string $title_id)
     {
-        //
+        $data['guide'] = Guide::query()->select('*')->where('title_id', '=',$title_id)->firstOrFail();
+        return view('getguide',$data);
     }
 
     /**

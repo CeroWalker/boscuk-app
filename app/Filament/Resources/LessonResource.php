@@ -86,6 +86,7 @@ class LessonResource extends Resource
                 TextColumn::make('title'),
                 TextColumn::make('title_id'),
                 TextColumn::make('lesson_id'),
+                TextColumn::make('created_at'),
             ])
             ->filters([
                 //

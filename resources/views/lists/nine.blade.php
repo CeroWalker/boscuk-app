@@ -6,7 +6,7 @@
         <tr>
             <td class="px-6 py-4 whitespace-nowrap">
                 <div class="text-sm text-gray-900">
-                    <a class="text-xl" href="{{ config('app.url') }}/ders/{{ $lesson->title_id }}">{{ $lesson->title }}</a>
+                    <a class="text-xl" href="{{ config('app.url') }}/dersler/{{ $lesson->title_id }}">{{ $lesson->title }}</a>
                 </div>
             </td>
         </tr>
@@ -20,7 +20,7 @@
         <tr>
             <td class="px-6 py-4 whitespace-nowrap">
                 <div class="text-sm text-gray-900">
-                    <a class="text-xl" href="{{ config('app.url') }}/ders/{{ $lesson->title_id }}">{{ $lesson->title }}</a>
+                    <a class="text-xl" href="{{ config('app.url') }}/dersler/{{ $lesson->title_id }}">{{ $lesson->title }}</a>
                 </div>
             </td>
         </tr>
@@ -34,7 +34,7 @@
         <tr>
             <td class="px-6 py-4 whitespace-nowrap">
                 <div class="text-sm text-gray-900">
-                    <a class="text-xl" href="{{ config('app.url') }}/ders/{{ $lesson->title_id }}">{{ $lesson->title }}</a>
+                    <a class="text-xl" href="{{ config('app.url') }}/dersler/{{ $lesson->title_id }}">{{ $lesson->title }}</a>
                 </div>
             </td>
         </tr>
@@ -48,7 +48,7 @@
         <tr>
             <td class="px-6 py-4 whitespace-nowrap">
                 <div class="text-sm text-gray-900">
-                    <a class="text-xl" href="{{ config('app.url') }}/ders/{{ $lesson->title_id }}">{{ $lesson->title }}</a>
+                    <a class="text-xl" href="{{ config('app.url') }}/dersler/{{ $lesson->title_id }}">{{ $lesson->title }}</a>
                 </div>
             </td>
         </tr>
@@ -62,7 +62,7 @@
         <tr>
             <td class="px-6 py-4 whitespace-nowrap">
                 <div class="text-sm text-gray-900">
-                    <a class="text-xl" href="{{ config('app.url') }}/ders/{{ $lesson->title_id }}">{{ $lesson->title }}</a>
+                    <a class="text-xl" href="{{ config('app.url') }}/dersler/{{ $lesson->title_id }}">{{ $lesson->title }}</a>
                 </div>
             </td>
         </tr>
@@ -76,7 +76,7 @@
         <tr>
             <td class="px-6 py-4 whitespace-nowrap">
                 <div class="text-sm text-gray-900">
-                    <a class="text-xl" href="{{ config('app.url') }}/ders/{{ $lesson->title_id }}">{{ $lesson->title }}</a>
+                    <a class="text-xl" href="{{ config('app.url') }}/dersler/{{ $lesson->title_id }}">{{ $lesson->title }}</a>
                 </div>
             </td>
         </tr>
@@ -90,7 +90,7 @@
         <tr>
             <td class="px-6 py-4 whitespace-nowrap">
                 <div class="text-sm text-gray-900">
-                    <a class="text-xl" href="{{ config('app.url') }}/ders/{{ $lesson->title_id }}">{{ $lesson->title }}</a>
+                    <a class="text-xl" href="{{ config('app.url') }}/dersler/{{ $lesson->title_id }}">{{ $lesson->title }}</a>
                 </div>
             </td>
         </tr>
@@ -104,7 +104,7 @@
         <tr>
             <td class="px-6 py-4 whitespace-nowrap">
                 <div class="text-sm text-gray-900">
-                    <a class="text-xl" href="{{ config('app.url') }}/ders/{{ $lesson->title_id }}">{{ $lesson->title }}</a>
+                    <a class="text-xl" href="{{ config('app.url') }}/dersler/{{ $lesson->title_id }}">{{ $lesson->title }}</a>
                 </div>
             </td>
         </tr>
@@ -118,7 +118,7 @@
         <tr>
             <td class="px-6 py-4 whitespace-nowrap">
                 <div class="text-sm text-gray-900">
-                    <a class="text-xl" href="{{ config('app.url') }}/ders/{{ $lesson->title_id }}">{{ $lesson->title }}</a>
+                    <a class="text-xl" href="{{ config('app.url') }}/dersler/{{ $lesson->title_id }}">{{ $lesson->title }}</a>
                 </div>
             </td>
         </tr>
@@ -132,7 +132,7 @@
         <tr>
             <td class="px-6 py-4 whitespace-nowrap">
                 <div class="text-sm text-gray-900">
-                    <a class="text-xl" href="{{ config('app.url') }}/ders/{{ $lesson->title_id }}">{{ $lesson->title }}</a>
+                    <a class="text-xl" href="{{ config('app.url') }}/dersler/{{ $lesson->title_id }}">{{ $lesson->title }}</a>
                 </div>
             </td>
         </tr>

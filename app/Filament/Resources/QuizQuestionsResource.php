@@ -19,6 +19,7 @@ use Filament\Tables\Table;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\SoftDeletingScope;
 use Illuminate\Support\Str;
+use Filament\Tables\Columns\TextColumn;
 
 class QuizQuestionsResource extends Resource
 {
@@ -37,11 +38,20 @@ class QuizQuestionsResource extends Resource
                             ->afterStateUpdated(fn (Set $set, ?string $state) => $set('title_id', Str::slug($state))),
                         TextInput::make('title_id')
                             ->prefix('https://beyondofseen.com/ders/'),
-                        RichEditor::make('content')
-                            ->fileAttachmentsDisk('s3')
-                            ->fileAttachmentsDirectory('images')
+                        RichEditor::make('question')
                             ->columnSpan(2)
                             ->required(),
+                        RichEditor::make('answers')
+                            ->columnSpan(2)
+                            ->required(),
+                        FileUpload::make('question_audio')
+                            ->disk('s3')
+                            ->directory('questions-audio-files')
+                            ->preserveFilenames(),
+                        FileUpload::make('answer-audio')
+                            ->disk('s3')
+                            ->directory('questions-audio-files')
+                            ->preserveFilenames(),
                     ]),
 
             ]);
@@ -51,7 +61,7 @@ class QuizQuestionsResource extends Resource
     {
         return $table
             ->columns([
-                //
+                TextColumn::make()
             ])
             ->filters([
                 //

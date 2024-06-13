@@ -39,7 +39,8 @@ class CulturesController extends Controller
      */
     public function show(string $title_id)
     {
-        //
+        $data['culture'] = Culture::query()->select('*')->where('title_id', '=', $title_id)->firstOrFail();
+        return view('getculture', $data);
     }
 
     /**

@@ -2,34 +2,30 @@
 
 namespace App\Filament\Resources;
 
-use App\Filament\Resources\GuideResource\Pages;
-use App\Filament\Resources\GuideResource\RelationManagers;
-use App\Models\Guide;
-use Faker\Provider\Text;
-use Filament\Actions\DeleteAction;
+use App\Filament\Resources\ToolsResource\Pages;
+use App\Filament\Resources\ToolsResource\RelationManagers;
+use App\Models\Tools;
 use Filament\Forms;
+use Filament\Forms\Components\FileUpload;
+use Filament\Forms\Components\RichEditor;
+use Filament\Forms\Components\Section;
+use Filament\Forms\Components\TextInput;
 use Filament\Forms\Form;
+use Filament\Forms\Set;
 use Filament\Resources\Resource;
 use Filament\Tables;
+use Filament\Tables\Columns\TextColumn;
 use Filament\Tables\Table;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\SoftDeletingScope;
-use Filament\Tables\Columns\TextColumn;
-use Filament\Forms\Components\TextInput;
-use Filament\Forms\Components\RichEditor;
-use Filament\Forms\Components\MarkdownEditor;
-use Filament\Forms\Components\Section;
-use Filament\Forms\Components\Select;
-use Filament\Forms\Set;
 use Illuminate\Support\Str;
-use Filament\Forms\Components\TagsInput;
-use Filament\Resources\Components\Tab;
+use Filament\Forms\Components\MarkdownEditor;
 
-class GuideResource extends Resource
+class ToolsResource extends Resource
 {
-    protected static ?string $model = Guide::class;
+    protected static ?string $model = Tools::class;
 
-    protected static ?string $navigationIcon = 'heroicon-o-puzzle-piece';
+    protected static ?string $navigationIcon = 'heroicon-o-wrench-screwdriver';
 
     public static function form(Form $form): Form
     {
@@ -41,13 +37,17 @@ class GuideResource extends Resource
                             ->live(onBlur: true)
                             ->afterStateUpdated(fn (Set $set, ?string $state) => $set('title_id', Str::slug($state))),
                         TextInput::make('title_id')
-                            ->prefix('https://beyondofseen.com/rehber/'),
-                        TextInput::make('video_link'),
-                        RichEditor::make('content')
-                            ->fileAttachmentsDisk('s3')
-                            ->fileAttachmentsDirectory('images')
+                            ->prefix('https://beyondofseen.com/arac/'),
+                        RichEditor::make('description')
                             ->columnSpan(2)
                             ->required(),
+                        MarkdownEditor::make('content')
+                            ->columnSpan(2)
+                            ->required(),
+                        FileUpload::make('content_image')
+                            ->disk('s3')
+                            ->directory('content-image')
+                            ->preserveFilenames(),
                     ]),
 
             ]);
@@ -58,10 +58,11 @@ class GuideResource extends Resource
         return $table
             ->columns([
                 TextColumn::make('title'),
-                TextColumn::make('title_id')->label('Link'),
+                TextColumn::make('title_id')->label("Url")
+                ->copyable()
+                ->copyableState(fn (string $state): string => "https://beyondofseen.com/arac/{$state}"),
                 TextColumn::make('edited_at')->label('Edited At'),
                 TextColumn::make('created_at')->label('Created At'),
-
             ])
             ->filters([
                 //
@@ -87,9 +88,9 @@ class GuideResource extends Resource
     public static function getPages(): array
     {
         return [
-            'index' => Pages\ListGuides::route('/'),
-            'create' => Pages\CreateGuide::route('/create'),
-            'edit' => Pages\EditGuide::route('/{record}/edit'),
+            'index' => Pages\ListTools::route('/'),
+            'create' => Pages\CreateTools::route('/create'),
+            'edit' => Pages\EditTools::route('/{record}/edit'),
         ];
     }
 }

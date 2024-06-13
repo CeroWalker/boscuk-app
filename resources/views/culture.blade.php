@@ -41,7 +41,7 @@
 
     @foreach($cultures as $culture)
         <div id="culture" class="bg-white rounded-xl shadow-md overflow-hidden">
-            <a class="text-gray-500 text-sm" href="{{ config('app.url') }}/kultur/{{ $culture->title_id }}">
+            <a class="text-gray-500 text-sm" href="{{ config('app.url') }}/genel-kultur/{{ $culture->title_id }}">
             <div class="relative">
                 <img id="content_image" class="w-full object-cover" src="{{ config('app.url') }}/storage/{{ $culture->content_image }}">
             </div>

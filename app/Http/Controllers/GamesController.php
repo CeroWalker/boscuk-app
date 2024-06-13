@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Games;
 use Illuminate\Http\Request;
 
 class GamesController extends Controller
@@ -11,7 +12,9 @@ class GamesController extends Controller
      */
     public function index()
     {
-        return view('games');
+        $games = Games::paginate(6);
+
+        return view('games', compact('games'));
     }
 
     /**
@@ -33,9 +36,10 @@ class GamesController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(string $id)
+    public function show(string $title_id)
     {
-        //
+        $data['games'] = Games::query()->select('*')->where('title_id', '=',$title_id)->firstOrFail();
+        return view('getgame',$data);
     }
 
     /**

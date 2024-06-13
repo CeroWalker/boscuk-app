@@ -50,9 +50,10 @@ class LessonsController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(string $lesson_id)
+    public function show(string $title_id)
     {
-        //
+        $data['lesson'] = Lessons::query()->select('*')->where('title_id', '=',$title_id)->firstOrFail();
+        return view('getlesson', $data);
     }
 
     /**

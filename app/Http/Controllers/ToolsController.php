@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Tools;
 use Illuminate\Http\Request;
 
 class ToolsController extends Controller
@@ -11,7 +12,9 @@ class ToolsController extends Controller
      */
     public function index()
     {
-        return view('tools');
+        $tools = Tools::paginate(6);
+
+        return view('tools', compact('tools'));
     }
 
     /**
@@ -33,9 +36,10 @@ class ToolsController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(string $id)
+    public function show(string $title_id)
     {
-        //
+        $data['tools'] = Tools::query()->select('*')->where('title_id', '=',$title_id)->firstOrFail();
+        return view('gettools', $data);
     }
 
     /**
