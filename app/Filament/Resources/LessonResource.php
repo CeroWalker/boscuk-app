@@ -39,7 +39,7 @@ class LessonResource extends Resource
                             ->live(onBlur: true)
                             ->afterStateUpdated(fn (Set $set, ?string $state) => $set('title_id', Str::slug($state))),
                         TextInput::make('title_id')
-                            ->prefix('https://beyondofseen.com/ders/'),
+                            ->prefix('https://beyondofseen.com/dersler/'),
                         Select::make('lesson_id')->required()
                             ->options([
                                 '9' => '9.Sınıf',

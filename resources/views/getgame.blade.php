@@ -3,7 +3,12 @@
     <meta charset="UTF-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="{!! nl2br($games->content) !!}">
+    <meta name="description" content="{{
+    Str::limit(
+        str_replace( ' ', ' ', strip_tags( $games->description ) ),
+        160
+    )
+    }}">
     <title>{{ config('app.name') }} - {{ $games->title }}</title>
     <link rel="icon" href="https://beyondofseen.com/images/logo.png" type="image/png">
     <link rel="stylesheet" href="{{ config('app.url') }}/css/style.css">
