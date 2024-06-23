@@ -41,7 +41,7 @@ class GuideResource extends Resource
                             ->live(onBlur: true)
                             ->afterStateUpdated(fn (Set $set, ?string $state) => $set('title_id', Str::slug($state))),
                         TextInput::make('title_id')
-                            ->prefix('https://beyondofseen.com/rehber/'),
+                            ->prefix('https://beyondofseen.com/rehberler/'),
                         TextInput::make('video_link'),
                         RichEditor::make('content')
                             ->fileAttachmentsDisk('s3')

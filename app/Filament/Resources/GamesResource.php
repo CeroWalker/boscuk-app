@@ -38,7 +38,7 @@ class GamesResource extends Resource
                             ->live(onBlur: true)
                             ->afterStateUpdated(fn (Set $set, ?string $state) => $set('title_id', Str::slug($state))),
                         TextInput::make('title_id')
-                            ->prefix('https://beyondofseen.com/arac/'),
+                            ->prefix('https://beyondofseen.com/oyunlar/'),
                         RichEditor::make('description')
                             ->columnSpan(2)
                             ->required(),
