@@ -14,6 +14,7 @@
 
     @foreach($games as $game)
         <div id="guide" class="bg-white rounded-xl shadow-md overflow-hidden">
+            <img id="content_image" class="w-full object-cover" src="{{ config('app.url') }}/storage/content-image/{{ $games->content_image }}">
             <a class="text-gray-500 text-sm" href="{{ config('app.url') }}/oyunlar/{{ $game->title_id }}">
                 <div class="p-4">
                     <div class="text-lg font-medium text-gray-800 mb-2">{{ $game->title }}</div>
