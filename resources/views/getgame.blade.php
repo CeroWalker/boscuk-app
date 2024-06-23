@@ -35,7 +35,7 @@
 
 <div class="bg-gray-900 text-white text-center py-20 mx-auto w-auto">
 	<div class="relative">
-		<img id="content_image" class="w-full object-cover" src="{{ config('app.url') }}/storage/{{ $culture->content_image }}">
+		<img id="content_image" class="w-full object-cover" src="{{ config('app.url') }}/storage/{{ $games->content_image }}">
 	</div>
     <h1 class="text-4xl font-bold mb-4">{{$games->title}}</h1>
     <div class="grid grid-cols-1 px-5">
