@@ -3,7 +3,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="{{ $culture->content }}">
+    <meta name="description" content="{!! nl2br($culture->content) !!}">
     <title>{{ config('app.name') }} - {{ $culture->title }}</title>
     <link rel="icon" href="https://beyondofseen.com/images/logo.png" type="image/png">
     <link rel="stylesheet" href="https://beyondofseen.com/css/style.css">
