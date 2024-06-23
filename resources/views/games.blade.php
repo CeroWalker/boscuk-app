@@ -16,7 +16,7 @@
         <div id="games" class="bg-white rounded-xl shadow-md overflow-hidden">
 
             @if($game->content_image != null)
-                <img id="content_image" class="w-full object-cover" src="{{ config('app.url') }}/storage/content-image/{{ $game->content_image }}">
+                <img id="content_image" class="w-full object-cover" src="{{ config('app.url') }}/storage/{{ $game->content_image }}">
             @endif
             <a class="text-gray-500 text-sm" href="{{ config('app.url') }}/oyunlar/{{ $game->title_id }}">
                 <div class="p-4">
