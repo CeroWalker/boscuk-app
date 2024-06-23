@@ -44,7 +44,9 @@
         <div id="guide" class="bg-white rounded-xl shadow-md overflow-hidden">
             <a class="text-gray-500 text-sm" href="{{ config('app.url') }}/araclar/{{ $tool->title_id }}">
                 <div class="relative">
-                    <img id="content_image" class="w-full object-cover" src="{{ config('app.url') }}/storage/{{ $tool->content_image }}">
+                    @if($tool->content_image != null)
+                        <img id="content_image" class="w-full object-cover" src="{{ config('app.url') }}/storage/{{ $tool->content_image }}">
+                    @endif
                 </div>
                 <div class="p-4">
                     <div class="text-lg font-medium text-gray-800 mb-2">{{ $tool->title }}</div>
