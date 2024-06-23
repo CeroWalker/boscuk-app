@@ -12,16 +12,6 @@
 </header>
 <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 p-10 md:px-20 md:mt-10">
 
-    <div class="bg-white rounded-xl shadow-md overflow-hidden">
-        <div class="relative">
-            <a href="{{ config('app_url') }}/oyun/dc"><img class="w-full h-auto object-cover" src="{{ config('app_url') }}/images/tod.png"></a>
-        </div>
-        <div class="p-4">
-            <div class="text-lg font-medium text-gray-800 mb-2"><a href="{{ config('app_url') }}/oyun/dc">Doğruluk mu? Cesaretlik mi?</a> </div>
-            <p class="text-gray-500 text-sm">Arkadaşlarınla ne kadar samimi olduğunu ve ne kadar cesur olduğunu test etmeye hazır mısın? Doğruluk mu Cesaret mi oyunu tam sana göre! Bu klasik oyun, ister yeni tanıştığın biriyle ister yıllardır tanıdığın bir dostunla oyna ister misin, her zaman eğlence ve heyecan dolu bir deneyim sunar.</p>
-        </div>
-    </div>
-
     @foreach($games as $game)
         <div id="guide" class="bg-white rounded-xl shadow-md overflow-hidden">
             <a class="text-gray-500 text-sm" href="{{ config('app.url') }}/oyunlar/{{ $game->title_id }}">
