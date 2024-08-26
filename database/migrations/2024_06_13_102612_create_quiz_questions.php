@@ -15,10 +15,9 @@ return new class extends Migration
             $table->id();
             $table->string('title');
             $table->string('title_id');
-            $table->text('question');
-            $table->text('answers');
-            $table->string('question_audio');
-            $table->string('answer_audio');
+            $table->text('lesson_id');
+            $table->text('lesson_group');
+            $table->string('html');
             $table->timestamps();
         });
     }

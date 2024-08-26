@@ -20,6 +20,8 @@ use Filament\Tables\Table;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\SoftDeletingScope;
 use Illuminate\Support\Str;
+use App\Filament\Resources\UserResource;
+use App\Models\User;
 
 class ActivityResource extends Resource
 {
@@ -33,11 +35,16 @@ class ActivityResource extends Resource
             ->schema([
                 Section::make()
                     ->schema([
-                        TextInput::make('user')->required(),
+                        Select::make('user')
+                        ->label('User')
+                            ->default(auth()->user()->getAuthIdentifier())
+                            ->selectablePlaceholder(false)
+                            ->disableOptionWhen(auth()->user()->getAuthIdentifier())
+                            ->options(User::all()->pluck('name', 'id'))
+                            ->required(),
                         TextInput::make('activity')->required(),
                         TextInput::make('description')->required(),
                     ]),
-
             ]);
     }
 
@@ -45,13 +52,15 @@ class ActivityResource extends Resource
     {
         return $table
             ->columns([
-                TextColumn::make('user'),
+                TextColumn::make('creator')->label('UserID')->sortable()->searchable()->getStateUsing(fn ($record) => $record->user),
                 TextColumn::make('activity'),
                 TextColumn::make('description'),
                 TextColumn::make('created_at')->label('Created At'),
             ])
             ->filters([
-                //
+                Tables\Filters\SelectFilter::make('user')
+                    ->default(auth()->user()->getAuthIdentifier())
+                    ->label('Kullanıcı'),
             ])
             ->actions([
                 Tables\Actions\EditAction::make(),

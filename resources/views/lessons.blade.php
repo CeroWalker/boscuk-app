@@ -15,7 +15,7 @@
 
     <div class="w-auto mt-10 mx-auto">
         <div class="bg-blue-500 p-2 rounded-t-lg">
-            <div class="flex justify-center space-x-4">
+            <div class="flex justify-center space-x-4 max-[610px]:grid max-[610px]:grid-cols-4">
                 <button class="px-4 py-2 text-white font-semibold border-b-4 border-blue-700 hover:bg-blue-700 focus:outline-none tab-button" onclick="showTab('9sinif')">9.Sınıf</button>
                 <button class="px-4 py-2 text-white font-semibold border-b-4 border-blue-700 hover:bg-blue-700 focus:outline-none tab-button" onclick="showTab('10sinif')">10. Sınıf</button>
                 <button class="px-4 py-2 text-white font-semibold border-b-4 border-blue-700 hover:bg-blue-700 focus:outline-none tab-button" onclick="showTab('11sinif')">11. Sınıf</button>

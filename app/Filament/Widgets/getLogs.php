@@ -27,11 +27,15 @@ class getLogs extends BaseWidget
             ->defaultPaginationPageOption('10')
             ->defaultSort('created_at', 'desc')
             ->columns([
-                TextColumn::make('user'),
+                TextColumn::make('creator')->label('UserID')->sortable()->searchable()->getStateUsing(fn ($record) => $record->user),
                 TextColumn::make('activity'),
                 TextColumn::make('description'),
-				TextColumn::make( 'created_at')->label('Created At'),
-                TextColumn::make( 'updated_at')->label('Edited At'),
+                TextColumn::make('created_at')->label('Created At'),
+            ])
+            ->filters([
+                Tables\Filters\SelectFilter::make('user')
+                    ->default(auth()->user()->getAuthIdentifier())
+                    ->label('Kullanıcı'),
             ]);
     }
 }

@@ -7,6 +7,7 @@ use App\Filament\Resources\QuizQuestionsResource\RelationManagers;
 use App\Models\QuizQuestions;
 use Filament\Forms;
 use Filament\Forms\Components\FileUpload;
+use Filament\Forms\Components\MarkdownEditor;
 use Filament\Forms\Components\RichEditor;
 use Filament\Forms\Components\Section;
 use Filament\Forms\Components\Select;
@@ -37,21 +38,31 @@ class QuizQuestionsResource extends Resource
                             ->live(onBlur: true)
                             ->afterStateUpdated(fn (Set $set, ?string $state) => $set('title_id', Str::slug($state))),
                         TextInput::make('title_id')
-                            ->prefix('https://beyondofseen.com/ders/'),
-                        RichEditor::make('question')
+                            ->prefix('https://beyondofseen.com/test/'),
+                        Select::make('lesson_id')->required()
+                            ->options([
+                                '9' => '9.Sınıf',
+                                '10' => '10.Sınıf',
+                                '11' => '11.Sınıf',
+                                '12' => '12.Sınıf',
+                                'ekpss' => 'Kpss/Ekpss',
+                            ]),
+                        Select::make('lesson_group')->required()
+                            ->options([
+                                'matematik' => 'Matematik',
+                                'edebiyat' => 'Türk Dili ve Edebiyatı',
+                                'fizik' => 'Fizik',
+                                'kimya' => 'Kimya',
+                                'biyoloji' => 'Biyoloji',
+                                'tarih' => 'Tarih',
+                                'cografya' => 'Coğrafya',
+                                'din' => 'Din Kültürü Ve Ahlak Bilgisi',
+                                'ingilizce' => 'İngilizce',
+                                'almanca' => 'Almanca',
+                            ]),
+                        MarkdownEditor::make('html')
                             ->columnSpan(2)
                             ->required(),
-                        RichEditor::make('answers')
-                            ->columnSpan(2)
-                            ->required(),
-                        FileUpload::make('question_audio')
-                            ->disk('s3')
-                            ->directory('questions-audio-files')
-                            ->preserveFilenames(),
-                        FileUpload::make('answer-audio')
-                            ->disk('s3')
-                            ->directory('questions-audio-files')
-                            ->preserveFilenames(),
                     ]),
 
             ]);
@@ -61,7 +72,12 @@ class QuizQuestionsResource extends Resource
     {
         return $table
             ->columns([
-                TextColumn::make()
+                TextColumn::make('title'),
+                TextColumn::make('title_id')->label("Url")
+                    ->copyable()
+                    ->copyableState(fn (string $state): string => "https://beyondofseen.com/oyunlar/{$state}"),
+                TextColumn::make('edited_at')->label('Edited At'),
+                TextColumn::make('created_at')->label('Created At'),
             ])
             ->filters([
                 //
