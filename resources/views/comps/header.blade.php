@@ -1,6 +1,6 @@
 <nav class="flex flex-wrap items-center justify-between p-3 bg-white border-gray-200">
   <a href="#" class="flex items-center space-x-3 rtl:space-x-reverse">
-    <img src="https://beyondofseen.com/images/logo.png" class="h-8" alt="Bos Logo" />
+    <img src="{{ config('app.url') }}/images/logo.png" class="h-8" alt="Bos Logo" />
     <span class="self-center text-2xl font-semibold whitespace-nowrap">Beyond Of Seen</span>
   </a>
   <div class="flex md:hidden">

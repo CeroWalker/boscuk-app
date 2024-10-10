@@ -14,6 +14,8 @@ use  App\Http\Controllers\GuideController;
 use  App\Http\Controllers\ToolsController;
 use  App\Http\Controllers\GamesController;
 
+use  App\Http\Controllers\QuizController;
+
 use App\Models\wordscoresaver;
 
 Route::get('/', function () {
@@ -31,3 +33,4 @@ Route::resource("/araclar", ToolsController::class);
 Route::resource("/oyunlar", GamesController::class);
 Route::resource("/genel-kultur", CulturesController::class);
 Route::resource("/rehberler", GuidesController::class);
+Route::resource('/testler', QuizController::class);
