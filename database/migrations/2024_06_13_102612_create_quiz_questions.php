@@ -17,7 +17,7 @@ return new class extends Migration
             $table->string('title_id');
             $table->text('quiz_id');
             $table->text('quiz_group');
-            $table->string('html');
+            $table->text('html');
             $table->timestamps();
         });
     }
