@@ -8,8 +8,8 @@
 @include('comps/tawk')
 <header class="bg-gray-900 text-white text-center py-20">
     <div class="container mx-auto">
-        <h1 class="text-4xl font-bold mb-4">Beyond Of Seen Dersler</h1>
-        <p class="text-lg">Sitemizde bulunan derslere bu sayfadan ulaşabilirsiniz</p>
+        <h1 class="text-4xl font-bold mb-4">Beyond Of Seen Testler</h1>
+        <p class="text-lg">Sitemizde bulunan testlere bu sayfadan ulaşabilirsiniz</p>
     </div>
 </header>
 
@@ -26,23 +26,23 @@
 
     <!-- Tab Content -->
     <div id="9sinif-test" class="p-4 tab-content bg-white shadow-md rounded-lg">
-        <h2 class="text-2xl font-semibold mb-2 text-gray-900">9. Sınıf'a ait ders notları</h2>
+        <h2 class="text-2xl font-semibold mb-2 text-gray-900">9. Sınıf'a ait testler</h2>
         @include('quiz-lists/nine')
     </div>
     <div id="10sinif-test" class="p-4 tab-content bg-white shadow-md rounded-lg hidden">
-        <h2 class="text-2xl font-semibold mb-2 text-gray-900">10. Sınıf'a ait ders notları</h2>
+        <h2 class="text-2xl font-semibold mb-2 text-gray-900">10. Sınıf'a ait testler</h2>
         @include('quiz-lists/ten')
     </div>
     <div id="11sinif-test" class="p-4 tab-content bg-white shadow-md rounded-lg hidden">
-        <h2 class="text-2xl font-semibold mb-2 text-gray-900">11. Sınıf'a ait ders notları</h2>
+        <h2 class="text-2xl font-semibold mb-2 text-gray-900">11. Sınıf'a ait testler</h2>
         @include('quiz-lists/eleven')
     </div>
     <div id="12sinif-test" class="p-4 tab-content bg-white shadow-md rounded-lg hidden">
-        <h2 class="text-2xl font-semibold mb-2 text-gray-900">12. Sınıf'a ait ders notları</h2>
+        <h2 class="text-2xl font-semibold mb-2 text-gray-900">12. Sınıf'a ait testler</h2>
         @include('quiz-lists/twelve')
     </div>
     <div id="ekpss-test" class="p-4 tab-content bg-white shadow-md rounded-lg hidden">
-        <h2 class="text-2xl font-semibold mb-2 text-gray-900">Kpss/Ekpss'ye ait ders notları</h2>
+        <h2 class="text-2xl font-semibold mb-2 text-gray-900">Kpss/Ekpss'ye ait testler</h2>
         @include('quiz-lists/ekpss')
     </div>
     <div class="bg-blue-500 p-2 rounded-b-lg w-full space-x-4" ><br><!-- Buradaki üşengeçliğimi sorgulama --><br></div>

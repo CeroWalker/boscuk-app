@@ -30,7 +30,7 @@
 @include("comps/tawk")
 
 <div class="bg-gray-900 text-white text-center py-20 mx-auto w-auto">
-    <h1 class="text-4xl font-bold mb-4">{{$quiz->title}}</h1>
+    <h1 class="text-4xl font-bold mb-4">{{$quiz->title}} Test</h1>
     <div class="grid grid-cols-1 px-5">
         <p class="text-l text-center mx-auto">{!! $quiz->html !!}</p>
     </div>
