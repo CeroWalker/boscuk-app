@@ -39,7 +39,7 @@ class QuizQuestionsResource extends Resource
                             ->afterStateUpdated(fn (Set $set, ?string $state) => $set('title_id', Str::slug($state))),
                         TextInput::make('title_id')
                             ->prefix('https://beyondofseen.com/test/'),
-                        Select::make('lesson_id')->required()
+                        Select::make('quiz_id')->required()
                             ->options([
                                 '9' => '9.Sınıf',
                                 '10' => '10.Sınıf',
@@ -47,7 +47,7 @@ class QuizQuestionsResource extends Resource
                                 '12' => '12.Sınıf',
                                 'ekpss' => 'Kpss/Ekpss',
                             ]),
-                        Select::make('lesson_group')->required()
+                        Select::make('quiz_group')->required()
                             ->options([
                                 'matematik' => 'Matematik',
                                 'edebiyat' => 'Türk Dili ve Edebiyatı',
