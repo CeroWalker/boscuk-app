@@ -1,6 +1,6 @@
 
 <h2 class="text-2xl text-blue-700">Matematik konuları:</h2>
-@foreach( $quiz as $quizes)
+@foreach( $quizes as $quiz)
 
     @if($quizes->quiz_id == 11 && $quizes->quiz_group == 'matematik')
         <tr>
@@ -14,7 +14,7 @@
 @endforeach
 
 <h2 class="text-2xl text-blue-700">Türk Dili Ve Edebiyatı konuları:</h2>
-@foreach( $quiz as $quizes)
+@foreach( $quizes as $quiz)
 
     @if($quizes->quiz_id == 11 && $quizes->quiz_group == 'edebiyat')
         <tr>
@@ -28,7 +28,7 @@
 @endforeach
 
 <h2 class="text-2xl text-blue-700">Fizik konuları:</h2>
-@foreach( $quiz as $quizes)
+@foreach( $quizes as $quiz)
 
     @if($quizes->quiz_id == 11 && $quizes->quiz_group == 'fizik')
         <tr>
@@ -42,7 +42,7 @@
 @endforeach
 
 <h2 class="text-2xl text-blue-700">Kimya konuları:</h2>
-@foreach( $quiz as $quizes)
+@foreach( $quizes as $quiz)
 
     @if($quizes->quiz_id == 11 && $quizes->quiz_group == 'kimya')
         <tr>
@@ -56,7 +56,7 @@
 @endforeach
 
 <h2 class="text-2xl text-blue-700">Biyoloji konuları:</h2>
-@foreach( $quiz as $quizes)
+@foreach( $quizes as $quiz)
 
     @if($quizes->quiz_id == 11 && $quizes->quiz_group == 'biyoloji')
         <tr>
@@ -70,7 +70,7 @@
 @endforeach
 
 <h2 class="text-2xl text-blue-700">Tarih konuları:</h2>
-@foreach( $quiz as $quizes)
+@foreach( $quizes as $quiz)
 
     @if($quizes->quiz_id == 11 && $quizes->quiz_group == 'tarih')
         <tr>
@@ -84,7 +84,7 @@
 @endforeach
 
 <h2 class="text-2xl text-blue-700">Coğrafya konuları:</h2>
-@foreach( $quiz as $quizes)
+@foreach( $quizes as $quiz)
 
     @if($quizes->quiz_id == 11 && $quizes->quiz_group == 'cografya')
         <tr>
@@ -98,7 +98,7 @@
 @endforeach
 
 <h2 class="text-2xl text-blue-700">Din konuları:</h2>
-@foreach( $quiz as $quizes)
+@foreach( $quizes as $quiz)
 
     @if($quizes->quiz_id == 11 && $quizes->quiz_group == 'din')
         <tr>
@@ -112,7 +112,7 @@
 @endforeach
 
 <h2 class="text-2xl text-blue-700">İngilizce konuları:</h2>
-@foreach( $quiz as $quizes)
+@foreach( $quizes as $quiz)
 
     @if($quizes->quiz_id == 11 && $quizes->quiz_group == 'ingilizce')
         <tr>
@@ -126,7 +126,7 @@
 @endforeach
 
 <h2 class="text-2xl text-blue-700">Almanca konuları:</h2>
-@foreach( $quiz as $quizes)
+@foreach( $quizes as $quiz)
 
     @if($quizes->quiz_id == 11 && $quizes->quiz_group == 'almanca')
         <tr>
