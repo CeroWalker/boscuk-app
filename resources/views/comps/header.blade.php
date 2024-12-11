@@ -17,6 +17,9 @@
     <a href="/dersler"
        class="inline-block md:inline-block text-blue-900 hover:text-blue-500 px-1 py-3 border-b-2 border-blue-900 md:border-none">Dersler
     </a>
+    <a href="/tesler"
+       class="inline-block md:inline-block text-blue-900 hover:text-blue-500 px-1 py-3 border-b-2 border-blue-900 md:border-none">Testler
+    </a>
     <a href="/araclar"
        class="inline-block md:inline-block text-blue-900 hover:text-blue-500 px-1 py-3 border-b-2 border-blue-900 md:border-none">Araçlar
     </a>
