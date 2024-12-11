@@ -42,7 +42,7 @@ class CultureResource extends Resource
                             ->live(onBlur: true)
                             ->afterStateUpdated(fn (Set $set, ?string $state) => $set('title_id', Str::slug($state))),
                         TextInput::make('title_id')
-                            ->prefix('https://beyondofseen.com/genel-kultur/'),
+                            ->prefix('https://beyondofseen.com.tr/genel-kultur/'),
                         RichEditor::make('content')
                             ->fileAttachmentsDisk('s3')
                             ->fileAttachmentsDirectory('images')

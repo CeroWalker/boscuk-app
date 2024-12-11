@@ -37,7 +37,7 @@ class ToolsResource extends Resource
                             ->live(onBlur: true)
                             ->afterStateUpdated(fn (Set $set, ?string $state) => $set('title_id', Str::slug($state))),
                         TextInput::make('title_id')
-                            ->prefix('https://beyondofseen.com/araclar/'),
+                            ->prefix('https://beyondofseen.com.tr/araclar/'),
                         RichEditor::make('description')
                             ->columnSpan(2)
                             ->required(),
@@ -60,7 +60,7 @@ class ToolsResource extends Resource
                 TextColumn::make('title'),
                 TextColumn::make('title_id')->label("Url")
                 ->copyable()
-                ->copyableState(fn (string $state): string => "https://beyondofseen.com/arac/{$state}"),
+                ->copyableState(fn (string $state): string => "https://beyondofseen.com.tr/araclar/{$state}"),
                 TextColumn::make('edited_at')->label('Edited At'),
                 TextColumn::make('created_at')->label('Created At'),
             ])
