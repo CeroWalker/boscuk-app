@@ -14,7 +14,7 @@
 @endforeach
 
 <h2 class="text-2xl text-blue-700">Türk Dili Ve Edebiyatı konuları:</h2>
-@foreach( $quiz as $quizes)
+@foreach( $quizes as $quiz)
 
     @if($quizes->quiz_id == 9 && $quizes->quiz_group == 'edebiyat')
         <tr>
@@ -70,7 +70,7 @@
 @endforeach
 
 <h2 class="text-2xl text-blue-700">Tarih konuları:</h2>
-@foreach( $quiz as $quizes)
+@foreach( $quizes as $quiz)
 
     @if($quizes->quiz_id == 9 && $quizes->quiz_group == 'tarih')
         <tr>
