@@ -1,12 +1,23 @@
-function generateSlug(inputElement) {
-    const value = inputElement.value;
-    const slug = value.toLowerCase()
-        .replace(/[^a-z0-9]+/g, '-') // Alfanümerik olmayan karakterleri `-` ile değiştir
-        .replace(/^-+|-+$/g, ''); // Baştaki ve sondaki `-` işaretlerini kaldır
-
-    // title_id alanını bul ve slug'ı yerleştir
+document.addEventListener('DOMContentLoaded', function () {
+    const titleField = document.querySelector('[name="title"]');
     const slugField = document.querySelector('[name="title_id"]');
-    if (slugField) {
-        slugField.value = slug;
+
+    if (titleField && slugField) {
+        titleField.addEventListener('blur', function () {
+            const value = titleField.value;
+            const slug = value
+                .toLowerCase()
+                .replace(/ğ/g, 'g')
+                .replace(/ü/g, 'u')
+                .replace(/ş/g, 's')
+                .replace(/ı/g, 'i')
+                .replace(/ö/g, 'o')
+                .replace(/ç/g, 'c')
+                .replace(/\s+/g, '-')
+                .replace(/^-+|-+$/g, '');
+
+            slugField.value = slug;
+        });
     }
-}
+});
+
