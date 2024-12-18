@@ -17,7 +17,7 @@ return new class extends Migration
             $table->string('title_id');
             $table->text('lesson_id');
             $table->text('lesson_group');
-            $table->text('content')->nullable();
+            $table->text('content');
             $table->string('content_audio')->nullable();
             $table->string('text_file')->nullable();
             $table->string('audio_file')->nullable();

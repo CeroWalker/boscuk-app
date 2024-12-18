@@ -16,8 +16,6 @@ use  App\Http\Controllers\GamesController;
 
 use  App\Http\Controllers\QuizController;
 
-use App\Models\wordscoresaver;
-
 Route::get('/', function () {
     return view('homepage');
 });

@@ -9,4 +9,6 @@ use Illuminate\Support\Facades\DB;
 class Lesson extends Model
 {
     use HasFactory;
+
+
 }
