@@ -13,6 +13,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 .replace(/ı/g, 'i')
                 .replace(/ö/g, 'o')
                 .replace(/ç/g, 'c')
+                .replace(/[^a-z0-9\s-]/g, '')
                 .replace(/\s+/g, '-')
                 .replace(/^-+|-+$/g, '');
 
