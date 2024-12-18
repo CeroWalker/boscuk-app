@@ -31,6 +31,14 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot(): void
     {
-        //
+        if (config('app.url') == 'https://beyondofseen.com')
+            URL::forceScheme('https');
+        Guide::unguard();
+        Lesson::unguard();
+        User::unguard();
+        QuizQuestions::unguard();
+        Activity::unguard();
+        Tools::unguard();
+        Games::unguard();
     }
 }
