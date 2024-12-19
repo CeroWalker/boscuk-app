@@ -72,7 +72,8 @@ class QuizQuestionsCrudController extends CrudController
             '9' => '9.Sınıf',
             '10' => '10.Sınıf',
             '11' => '11.Sınıf',
-            '12' => '12.Sınıf'
+            '12' => '12.Sınıf',
+            'Kpss/Ekpss' => 'ekpss'
         ]);
         CRUD::field('quiz_group')->label('Ders')->type('select_from_array')->options([
             'matematik' => 'Matematik',
