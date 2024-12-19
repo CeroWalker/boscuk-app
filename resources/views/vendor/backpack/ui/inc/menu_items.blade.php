@@ -8,3 +8,5 @@
 <x-backpack::menu-item title="Araçlar" icon="la la-tools" :link="backpack_url('tools')" />
 <x-backpack::menu-item title="Oyunlar" icon="la la-gamepad" :link="backpack_url('games')" />
 <x-backpack::menu-item title="Kullanıcılar" icon="la la-user" :link="backpack_url('user')" />
+
+<x-backpack::menu-item :title="trans('backpack::crud.file_manager')" icon="la la-files-o" :link="backpack_url('elfinder')" />

@@ -11,6 +11,7 @@
     "require": {
         "php": "^8.2",
         "backpack/crud": "^6.7",
+        "backpack/filemanager": "^3.0",
         "backpack/language-switcher": "^2.0",
         "backpack/theme-tabler": "^1.2",
         "laravel/framework": "^11.31",
